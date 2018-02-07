@@ -1,0 +1,1 @@
+ h.addHighlight((pos[i] - 1) + (offset), ((pos[i] - 1) + searchlen + (offset)), DefaultHighlighter.DefaultPainter);

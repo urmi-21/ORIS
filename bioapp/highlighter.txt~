@@ -1,0 +1,6 @@
+
+for linux
+h.addHighlight((pos[i] - 1) + (offset), ((pos[i] - 1) + searchlen + (offset)), DefaultHighlighter.DefaultPainter);
+
+for windows
+h.addHighlight((pos[i] - 1) + (offset * 2), ((pos[i] - 1) + searchlen + (offset * 2)), DefaultHighlighter.DefaultPainter);
