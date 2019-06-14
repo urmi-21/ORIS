@@ -2,6 +2,13 @@
 <project-private xmlns="http://www.netbeans.org/ns/project-private/1">
     <editor-bookmarks xmlns="http://www.netbeans.org/ns/editor-bookmarks/2" lastBookmarkId="0"/>
     <open-files xmlns="http://www.netbeans.org/ns/projectui-open-files/2">
-        <group/>
+        <group>
+            <file>file:/D:/NetBeansProjects/genelib/src/genelib/Correlationmultithreaded.java</file>
+            <file>file:/D:/NetBeansProjects/genelib/src/genelib/Plotnucleocompositions.java</file>
+            <file>file:/D:/NetBeansProjects/genelib/src/genelib/CummGCskew.java</file>
+            <file>file:/D:/NetBeansProjects/genelib/src/genelib/PredictOric.java</file>
+            <file>file:/D:/NetBeansProjects/genelib/src/genelib/Plot.java</file>
+            <file>file:/D:/NetBeansProjects/genelib/src/genelib/GCskew.java</file>
+        </group>
     </open-files>
 </project-private>

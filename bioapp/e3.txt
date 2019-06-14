@@ -1,0 +1,17 @@
+Search for the String TTATCCACA	Tolerance value = 0
+
+Found at pos 391307	TTATCCACA
+Found at pos 489340	TTATCCACA
+Found at pos 560679	TTATCCACA
+Found at pos 734576	TTATCCACA
+Found at pos 750192	TTATCCACA
+Found at pos 1136348	TTATCCACA
+Found at pos 1404558	TTATCCACA
+Found at pos 1605769	TTATCCACA
+Found at pos 1844771	TTATCCACA
+Found at pos 1925155	TTATCCACA
+Found at pos 1926617	TTATCCACA
+Found at pos 2120600	TTATCCACA
+Found at pos 2593592	TTATCCACA
+Found at pos 2676587	TTATCCACA
+Total Matches= 14, Exact Matches= 14

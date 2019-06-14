@@ -1,0 +1,28 @@
+Search for the String ATATATTAT	Tolerance value = 0
+
+Found at pos 41699	ATATATTAT
+Found at pos 160675	ATATATTAT
+Found at pos 782169	ATATATTAT
+Found at pos 819713	ATATATTAT
+Found at pos 916043	ATATATTAT
+Found at pos 1215251	ATATATTAT
+Found at pos 1412566	ATATATTAT
+Found at pos 1577683	ATATATTAT
+Found at pos 1700175	ATATATTAT
+Found at pos 1779710	ATATATTAT
+Found at pos 1935522	ATATATTAT
+Found at pos 1942555	ATATATTAT
+Found at pos 2050504	ATATATTAT
+Found at pos 2691831	ATATATTAT
+Found at pos 2733060	ATATATTAT
+Found at pos 3095546	ATATATTAT
+Found at pos 3303000	ATATATTAT
+Found at pos 3544285	ATATATTAT
+Found at pos 3728194	ATATATTAT
+Found at pos 3748317	ATATATTAT
+Found at pos 3885649	ATATATTAT
+Found at pos 4107289	ATATATTAT
+Found at pos 4171796	ATATATTAT
+Found at pos 4178173	ATATATTAT
+Found at pos 4207730	ATATATTAT
+Total Matches= 25, Exact Matches= 25

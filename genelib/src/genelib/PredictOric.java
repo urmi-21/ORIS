@@ -73,7 +73,7 @@ public class PredictOric extends Thread {
             System.err.println("Reading glimmer");
             cdslist = readglimmeroutput(fname);
         } else if (type == 1) {
-            System.err.println("Reading ptt");
+            //System.err.println("Reading ptt");
             cdslist = readptt(fname);
         }
 //        for (int i=0;i<cdslist.length-1;i=i+2){
