@@ -1187,11 +1187,18 @@ public class Form2 extends javax.swing.JFrame {
                     offset = pos[i] / 70;
                     // System.out.printf("offset=%d\n", offset);
                     try {
-                        //for linux
-                        h.addHighlight((pos[i] - 1) + (offset), ((pos[i] - 1) + searchlen + (offset)), DefaultHighlighter.DefaultPainter);
+                        
+                        String thisOS= System.getProperty("os.name");
+                        if(thisOS.contains("Windows")){
+                            //for windows
+                         h.addHighlight((pos[i] - 1) + (offset * 2), ((pos[i] - 1) + searchlen + (offset * 2)), DefaultHighlighter.DefaultPainter);
+                        }else{
+                           //for linux
+                            h.addHighlight((pos[i] - 1) + (offset), ((pos[i] - 1) + searchlen + (offset)), DefaultHighlighter.DefaultPainter);
+                        }
+                        
 
-                        //for windows
-                        // h.addHighlight((pos[i] - 1) + (offset * 2), ((pos[i] - 1) + searchlen + (offset * 2)), DefaultHighlighter.DefaultPainter);
+                        
                     } catch (BadLocationException ex) {
                         Logger.getLogger(Form2.class.getName()).log(Level.SEVERE, null, ex);
                     }
