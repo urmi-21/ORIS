@@ -11,8 +11,8 @@ import javax.swing.JOptionPane;
 //import sun.org.mozilla.javascript.internal.ScriptRuntime;
 
 /**
- *
- * @author slim
+ *Class to read input genome file in fasta format and compute sequence statistics
+ * @author urmi
  */
 public class Readfile {
 
@@ -20,7 +20,12 @@ public class Readfile {
     String fileinfo = null;
     String filedata;
     int numlines;
-
+    
+    /**
+     * function to read a new file
+     * @param filepath
+     * @return 
+     */
     public String newread(String filepath) {
 
         int x;

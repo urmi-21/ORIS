@@ -20,8 +20,8 @@ import javax.script.ScriptEngineManager;
 import javax.script.ScriptException;
 
 /**
- *
- * @author slim
+ *Class to compute skew using custom formula entered by the user
+ * @author urmi
  */
 public class Customformula {
 
@@ -34,6 +34,15 @@ public class Customformula {
     final JFrame frame = new JFrame("Progress");
     private JProgressBar pBar = new JProgressBar();
 
+    /**
+     * 
+     * @param form A string representing the formula
+     * @param val DNA sequence
+     * @param ws window size
+     * @param inc increment size
+     * @param save save flag
+     * @param fname filename to save results
+     */
     public Customformula(String form, char[] val, int ws, int inc, int save, String fname) {
         formula = form;
         sequence = val;
@@ -154,6 +163,11 @@ public class Customformula {
     }
 
     //function to compute the formula
+    /**
+     * 
+     * @param seq input DNA seq
+     * @return  computed skew value
+     */
     private double computeformula(char[] seq) {
 
         //make a a copy of the expression
@@ -219,8 +233,6 @@ public class Customformula {
         }
         //System.out.println("now formula is :  " + copiedformula);
 
-
-
         // Get JavaScript engine
         ScriptEngine engine = new ScriptEngineManager().getEngineByExtension("js");
         try {
@@ -232,7 +244,6 @@ public class Customformula {
             // Something went wrong
             e.printStackTrace();
         }
-
 
         return Double.valueOf(result.toString());
     }

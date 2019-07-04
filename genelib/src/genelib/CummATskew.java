@@ -1,7 +1,4 @@
-/*
- * To change this template, choose Tools | Templates
- * and open the template in the editor.
- */
+
 package genelib;
 
 import java.awt.Dimension;
@@ -18,8 +15,8 @@ import javax.swing.JOptionPane;
 import javax.swing.JProgressBar;
 
 /**
- *
- * @author jnu
+ *Class to compute cumulative  ATskew
+ * @author urmi
  */
 public class CummATskew extends Thread {
 
@@ -32,6 +29,14 @@ public class CummATskew extends Thread {
     int saveflag;
     String filename;
 
+    /**
+     * 
+     * @param val DNA sequence
+     * @param ws window size
+     * @param inc increment size
+     * @param save save flag
+     * @param fname filename to save results
+     */
     public CummATskew(char[] val, int ws, int inc, int save, String fname) {
         sequence = val;
         winsize = ws;
@@ -43,10 +48,8 @@ public class CummATskew extends Thread {
     }
 
     public void run() {
-
         
         int start = 0, totlwin = 0;
-
         //if savefile is required 
         BufferedWriter writer = null;
         String tmpindex;

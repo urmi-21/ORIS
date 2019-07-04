@@ -1,7 +1,4 @@
-/*
- * To change this template, choose Tools | Templates
- * and open the template in the editor.
- */
+
 package genelib;
 
 import java.awt.Dimension;
@@ -25,7 +22,7 @@ import javax.swing.JOptionPane;
 import javax.swing.JProgressBar;
 
 /**
- *
+ *Class to compute cross-correlation measure
  * @author slim
  */
 public class Crosscorrelation extends Thread {
@@ -43,6 +40,18 @@ public class Crosscorrelation extends Thread {
     int saveflag;
     String filename;
 
+    /**
+     * 
+     * @param val DNA sequence
+     * @param wsize window size
+     * @param inc increment size
+     * @param n1 first nucleotide
+     * @param n2 second nucleotide
+     * @param kval k value to compute correlation
+     * @param flagval flag indicating multiple kvalues from 1...k
+     * @param save save file flag
+     * @param fname filename to save results
+     */
     public Crosscorrelation(char[] val, int wsize, int inc,char n1,char n2, int kval, int flagval, int save, String fname) {
 
         sequence = val;
@@ -243,6 +252,7 @@ public class Crosscorrelation extends Thread {
     }
 }
 
+//class to call function
 class Crosscorrcaller implements Callable<Double> {
 
     int kvalue, kflag;
@@ -282,7 +292,13 @@ class Crosscorrfunc {
         }
 
     }
-
+    /**
+     * Function to convert char array(DNA) to int array
+     * @param orgseq input sequence
+     * @param c1 first nucleotide
+     * @param c2 second nucleotide
+     * @return 
+     */
     public double corG(char[] orgseq,char c1, char c2) {
         char[] cS = orgseq;
         cg = new float[cS.length];
@@ -326,7 +342,7 @@ class Crosscorrfunc {
             //System.out.printf("k=%d sum=%f\n", i + 1, cg[i]);
         }
 
-
+        //return answer
         return sum;
 
     }

@@ -18,8 +18,8 @@ import javax.swing.JOptionPane;
 import javax.swing.JProgressBar;
 
 /**
- *
- * @author jnu
+ *Class to compute Shannon's entropy measure
+ * @author urmi
  */
 public class Entropy extends Thread {
 
@@ -32,7 +32,15 @@ public class Entropy extends Thread {
     int increament;
     int saveflag;
     String filename;
-
+    
+    /**
+     * 
+     * @param val DNA sequence
+     * @param ws window size
+     * @param inc increment size
+     * @param save save flag
+     * @param fname filename to save results
+     */
     public Entropy(char[] seq, int wsize, int inc, int save, String fname) {
         sequence = seq;
         winsize = wsize;
@@ -112,7 +120,7 @@ public class Entropy extends Thread {
             countT = sob2.returncount(subsequence, 'T');
 
 
-            // calculate pilogpi
+            // calculate Entropy: -sum{pi*log(pi)}
             pa = ((double) countA / (double) subsequence.length);
 
             pa = pa * (Math.log(pa) / Math.log(2));

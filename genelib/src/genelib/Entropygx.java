@@ -18,8 +18,8 @@ import javax.swing.JOptionPane;
 import javax.swing.JProgressBar;
 
 /**
- *
- * @author jnu
+ *Class to compute binary entropy
+ * @author urmi
  */
 public class Entropygx extends Thread {
 
@@ -34,6 +34,15 @@ public class Entropygx extends Thread {
     int saveflag;
     String filename;
 
+    /**
+     * 
+     * @param val DNA sequence
+     * @param ch nucleotide or sequence to treat as different class
+     * @param wsize window size
+     * @param inc increment size
+     * @param save save flag
+     * @param fname filename to save results
+     */
     public Entropygx(char[] seq, String ch, int wsize, int inc, int save, String fname) {
         sequence = seq;
         valueup=ch;
@@ -110,8 +119,7 @@ public class Entropygx extends Thread {
              count = sob2.returncount(subsequence, valueup);
             
 
-
-            // calculate pilogpi
+           // calculate entropy
             
             pg = ((double) count / (double) subsequence.length);
             px=1-pg;

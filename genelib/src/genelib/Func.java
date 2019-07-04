@@ -10,8 +10,8 @@ import javax.swing.JButton;
 import javax.swing.JFrame;
 
 /**
- *
- * @author jnu
+ *This class contains the autocorrelation and skew measures
+ * @author urmi
  */
 public class Func {
 
@@ -24,6 +24,10 @@ public class Func {
     /*store all the results in ca ct cg cc resp*/
     //corelation with G
     //cS copied seq, iS corresponding integer seq
+    /**
+     * @param orgseq input DNA sequence
+     * @return autocorrelation value
+     */
     public float corG(char[] orgseq) {
         char[] cS = orgseq;
         cg = new float[cS.length];
@@ -62,14 +66,18 @@ public class Func {
 
     }
 
-    public float GCskew(char[] Orgseq) {
+    /**
+     * @param orgseq input DNA sequence
+     * @return GCskew value
+     */
+    public float GCskew(char[] orgseq) {
 
         int gcount = 0, ccount = 0;
 
-        for (int i = 0; i < Orgseq.length; i++) {
-            if (Orgseq[i] == 'G') {
+        for (int i = 0; i < orgseq.length; i++) {
+            if (orgseq[i] == 'G') {
                 gcount++;
-            } else if (Orgseq[i] == 'C') {
+            } else if (orgseq[i] == 'C') {
                 ccount++;
             }
 
@@ -79,6 +87,10 @@ public class Func {
         return res;
     }
 
+    /**
+     * @param orgseq input DNA sequence
+     * @return ATskew value
+     */
     public float ATskew(char[] Orgseq) {
 
         int acount = 0, tcount = 0;
@@ -96,6 +108,10 @@ public class Func {
         return res;
     }
 
+    /**
+     * @param orgseq input DNA sequence
+     * @return MKskew value
+     */
     public float MKskew(char[] Orgseq) {
 
         int acount = 0, tcount = 0, ccount = 0, gcount = 0,mcount=0,kcount=0;
@@ -120,7 +136,10 @@ public class Func {
         return res;
     }
     
-    
+    /**
+     * @param orgseq input DNA sequence
+     * @return RYskew value
+     */
     public float RYskew(char[] Orgseq) {
 
         int acount = 0, tcount = 0, ccount = 0, gcount = 0,rcount=0,ycount=0;

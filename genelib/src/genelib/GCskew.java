@@ -17,8 +17,8 @@ import javax.swing.JOptionPane;
 import javax.swing.JProgressBar;
 
 /**
- *
- * @author slim
+ *Class to compute GCskew
+ * @author urmi
  */
 public class GCskew extends Thread {
 
@@ -29,7 +29,16 @@ public class GCskew extends Thread {
     String filename;
     final JFrame frame = new JFrame("Progress");
     private JProgressBar pBar = new JProgressBar();
-
+    
+    
+    /**
+     * 
+     * @param val DNA sequence
+     * @param ws window size
+     * @param inc increment size
+     * @param save save flag
+     * @param fname filename to save results
+     */
     public GCskew(char[] val, int ws, int inc, int save, String fname) {
         sequence = val;
         winsize = ws;

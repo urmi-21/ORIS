@@ -18,8 +18,8 @@ import javax.swing.JOptionPane;
 import javax.swing.JProgressBar;
 
 /**
- *
- * @author jnu
+ *Class to compute cumulative  RYskew
+ * @author urmi
  */
 public class CummRYskew extends Thread {
 
@@ -34,6 +34,14 @@ public class CummRYskew extends Thread {
     public String mm="sdadsa";
     public int maxwin=0;
     public double[] cgcdata=null;
+    /**
+     * 
+     * @param val DNA sequence
+     * @param ws window size
+     * @param inc increment size
+     * @param save save flag
+     * @param fname filename to save results
+     */
     public CummRYskew(char[] val, int ws, int inc, int save, String fname) {
         sequence = val;
         winsize = ws;

@@ -17,8 +17,8 @@ import javax.swing.JOptionPane;
 import javax.swing.JProgressBar;
 
 /**
- *
- * @author slim
+ *Class to compute RYskew
+ * @author urmi
  */
 public class RYskew extends Thread {
 
@@ -30,6 +30,14 @@ public class RYskew extends Thread {
     final JFrame frame = new JFrame("Progress");
     private JProgressBar pBar = new JProgressBar();
 
+    /**
+     * 
+     * @param val DNA sequence
+     * @param ws window size
+     * @param inc increment size
+     * @param save save flag
+     * @param fname filename to save results
+     */
     public RYskew(char[] val, int ws, int inc, int save, String fname) {
         sequence = val;
         winsize = ws;

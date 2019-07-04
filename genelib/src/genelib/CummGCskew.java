@@ -18,8 +18,8 @@ import javax.swing.JOptionPane;
 import javax.swing.JProgressBar;
 
 /**
- *
- * @author jnu
+ *Class to compute cumulative  GCskew
+ * @author urmi
  */
 public class CummGCskew extends Thread {
 
@@ -34,6 +34,15 @@ public class CummGCskew extends Thread {
     //public String mm="sdadsa";
     public int maxwin=0;
     public double[] cgcdata=null;
+    
+    /**
+     * 
+     * @param val DNA sequence
+     * @param ws window size
+     * @param inc increment size
+     * @param save save flag
+     * @param fname filename to save results
+     */
     public CummGCskew(char[] val, int ws, int inc, int save, String fname) {
         sequence = val;
         winsize = ws;

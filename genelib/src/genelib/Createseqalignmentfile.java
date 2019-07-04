@@ -27,8 +27,6 @@ public class Createseqalignmentfile extends Thread {
 
 
 
-
-
         File f = new File("samplealignment.txt");
 
         BufferedWriter writer = null;
