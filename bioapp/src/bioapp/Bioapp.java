@@ -21,7 +21,9 @@ import javax.swing.*;
 
 /**
  *
- * @author jnu
+ * @author urmi
+ * 
+ * This is the main class for ORIS
  */
 public class Bioapp  {
 //the pictures
@@ -37,19 +39,6 @@ public class Bioapp  {
 
     public static void main(final String args[]) {
 
-
-        /*Bioapp ob = new Bioapp();
-        //display image for some time then display main form
-        long start = System.currentTimeMillis();
-        //display image for t secs
-        int t=3;
-        long end = start + t * 1000; // 60 seconds * 1000 ms/sec
-        
-        while ((System.currentTimeMillis() < end)) {
-        ob.setVisible(true);
-        }ob.dispose();
-         */
-
         //for Splash screen
         initsplashscreen();     // initialize splash screen drawing parameters
         appInit();              // Show splash image for some time or show a message
@@ -64,7 +53,6 @@ public class Bioapp  {
 
             public void run() {
 
-
                 try {
                     new Form2().callmain();
                 } catch (FileNotFoundException ex) {
@@ -72,10 +60,6 @@ public class Bioapp  {
                 } catch (IOException ex) {
                     Logger.getLogger(Bioapp.class.getName()).log(Level.SEVERE, null, ex);
                 }
-
-
-
-
 
             }
         });
