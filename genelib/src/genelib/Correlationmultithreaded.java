@@ -27,8 +27,8 @@ import javax.swing.JOptionPane;
 import javax.swing.JProgressBar;
 
 /**
- *
- * @author slim
+ *Class to compute autocorrelation function using multiple threads
+ * @author urmi
  */
 public class Correlationmultithreaded extends Thread {
 
@@ -49,6 +49,18 @@ public class Correlationmultithreaded extends Thread {
    public double[]corrdata;
    
 
+    /**
+     * Constructor Correlationmultithreaded
+     * @param val the input DNA sequence
+     * @param wsize window size
+     * @param inc increment size
+     * @param kval value used for k (see methods)
+     * @param flagval indicate whether to use a particular k or till a given number
+     * @param save flag for saving file
+     * @param fname filename
+     * @param pri Specify priority (Medium or Low) to create multiple threads 'M' or 'L'
+     * @param coeff The charecter used for autocorrelation i.e. A,C,G or T
+     */
     public Correlationmultithreaded(char[] val, int wsize, int inc, int kval, int flagval, int save, String fname, char pri,char coeff) {
 
         sequence = val;
@@ -262,11 +274,18 @@ public class Correlationmultithreaded extends Thread {
     }
 }
 
+//class to  call Corrfunc2
 class Corrcaller implements Callable<Double> {
 
     int kvalue, kflag;
     char[] seq;
     char coef;
+    /**
+     * 
+     * @param s sequence
+     * @param k k value
+     * @param flag flag indicating multiple k from 1..k
+     */
     Corrcaller(char[] s, int k, int flag) {
         seq = s;
         kvalue = k;
@@ -281,7 +300,7 @@ class Corrcaller implements Callable<Double> {
     }
 }
 
-//class to computer correlation for a sequence
+//class to compute correlation for a sequence
 class Corrfunc2 {
 
     float[] cg;
@@ -306,7 +325,7 @@ class Corrfunc2 {
         cg = new float[cS.length];
         //iS for integer sequence
         int[] iS = new int[cS.length];
-        //create numeric sequence from char sequence
+        //create numeric sequence from char sequence. corrcoef chars are mapped to 1 and others to -1
         for (int i = 0; i < cS.length; i++) {
             if (cS[i] == Correlationmultithreaded.corrcoef) {
                 iS[i] = 1;

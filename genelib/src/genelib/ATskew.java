@@ -18,11 +18,12 @@ import javax.swing.JOptionPane;
 import javax.swing.JProgressBar;
 
 /**
- *
+ *This class computes the ATskew method
  * @author slim
  */
 public class ATskew extends Thread {
 
+    
     final char[] sequence;
     int winsize;
     int increament;
@@ -31,11 +32,23 @@ public class ATskew extends Thread {
     final JFrame frame = new JFrame("Progress");
     private JProgressBar pBar = new JProgressBar();
 
+    /**
+     * Constructor for ATskew class
+     * @param val the input DNA sequence
+     * @param ws Window size
+     * @param inc Increment size
+     * @param save Save flag to save the results
+     * @param fname Filename to save the results
+     */
     public ATskew(char[] val, int ws, int inc, int save, String fname) {
         sequence = val;
         winsize = ws;
         increament = inc;
         if (save == 1) {
+            if(fname==null){
+                JOptionPane.showMessageDialog(null, "No filename given");
+                return;
+            }
             filename = fname;
             saveflag = 1;
         }
@@ -49,7 +62,7 @@ public class ATskew extends Thread {
         }
         int start = 0, totlwin = 0;
 
-        //get size to store all the results from each window
+        //compute total number of windows
         for (start = 0; start + winsize <= sequence.length; start = start + increament) {
             totlwin++;
         }
@@ -68,7 +81,6 @@ public class ATskew extends Thread {
         frame.setLocation((width / 2), (height / 2));
         frame.setResizable(false);
         frame.setVisible(true);
-
 
         //if savefile is required 
         BufferedWriter writer = null;
@@ -96,14 +108,15 @@ public class ATskew extends Thread {
 
         }
 
-        double[] atresults = new double[totlwin];
-        double[] xaxis = new double[totlwin];
-        int rindex = 0;
+        double[] atresults = new double[totlwin]; //to store main results
+        double[] xaxis = new double[totlwin]; //to store x axis
+        int rindex = 0; //index variable for atresults and xaxis arrays
         char[] subsequence = new char[winsize];
 
         //create object of class FUNC which contains method to calculate ATskew
         Func sob2 = new Func();
-
+        
+        //for each window
         for (start = 0; start + winsize <= sequence.length; start = start + increament) {
             for (int i = 0; i < winsize; i++) {
                 subsequence[i] = sequence[start + i];
@@ -116,8 +129,9 @@ public class ATskew extends Thread {
            
             }
         }
-        frame.dispose();
+        frame.dispose(); //dispose progress bar
 
+        //save file
         if (saveflag == 1) {
             for (int i = 0; i < atresults.length; i++) {
                 try {
@@ -139,9 +153,6 @@ public class ATskew extends Thread {
                 Logger.getLogger(ATskew.class.getName()).log(Level.SEVERE, null, ex);
             }
         }
-
-
-//        frame.dispose();
 
         //create plot object
         Plot newplot = new Plot();
