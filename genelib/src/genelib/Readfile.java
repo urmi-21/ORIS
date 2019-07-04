@@ -23,13 +23,11 @@ public class Readfile {
     
     /**
      * function to read a new file
-     * @param filepath
+     * @param filepath absolute path of the fasta file
      * @return 
      */
     public String newread(String filepath) {
 
-        int x;
-        char ch;
         numlines = 0;
         BufferedReader br = null;
         BufferedReader cr = null;
@@ -40,11 +38,9 @@ public class Readfile {
         String ls = System.getProperty("line.separator");
 
         int f = 0;
-
+        //read file
         try {
-
             String sCurrentLine;
-
             br = new BufferedReader(new FileReader(filepath));
 
             while ((sCurrentLine = br.readLine()) != null) {
@@ -82,7 +78,6 @@ public class Readfile {
         }
 
         System.out.println("Total lines=" + numlines);
-
         String seqstr = stringBuilderseq.toString();
 
         sequence = new char[seqstr.length()];
@@ -113,10 +108,19 @@ public class Readfile {
 
     }
 
+    /**
+     * return the DNA sequence data as char array
+     * @return DNA sequence
+     */
     public char[] returnseq() {
         return sequence;
     }
 
+    /**
+     * rotate the circular genomic DNA by given nucleotides. 
+     * @param index number of nucleotides to rotate
+     * @param direction clockwise ot anti-clockwise
+     */
     public void rotateseq(int index, int direction) {
 
         char[] result = new char[sequence.length];
@@ -139,11 +143,19 @@ public class Readfile {
                 null, "Sequence has been rotated by: " + String.valueOf(index));
     }
 
+    /**
+     * returns the length of genome
+     * @return 
+     */
     public String returnglength() {
         //System.out.println("length=" + sequence.length);
         return String.valueOf(sequence.length);
     }
 
+    /**
+     * return percent of A nucleotides
+     * @return 
+     */
     public String returnpercentA() {
         float ctrA = 0;
         for (int i = 0; i < sequence.length; i++) {
@@ -155,6 +167,10 @@ public class Readfile {
         return String.valueOf(percentA);
     }
 
+    /**
+     * return percent of G nucleotides
+     * @return 
+     */
     public String returnpercentG() {
         float ctrG = 0;
         for (int i = 0; i < sequence.length; i++) {
@@ -166,6 +182,10 @@ public class Readfile {
         return String.valueOf(percentG);
     }
 
+    /**
+     * return percent of C nucleotides
+     * @return 
+     */
     public String returnpercentC() {
         float ctrC = 0;
         for (int i = 0; i < sequence.length; i++) {
@@ -177,6 +197,10 @@ public class Readfile {
         return String.valueOf(percentC);
     }
 
+    /**
+     * return percent of T nucleotides
+     * @return 
+     */
     public String returnpercentT() {
         float ctrT = 0;
         for (int i = 0; i < sequence.length; i++) {
@@ -188,6 +212,10 @@ public class Readfile {
         return String.valueOf(percentT);
     }
 
+    /**
+     * return genome GI from fasta header
+     * @return 
+     */
     public String returngi() {
 
         if (fileinfo == null) {
@@ -227,6 +255,10 @@ public class Readfile {
 
     }
 
+    /**
+     * return genome accession from fasta header
+     * @return 
+     */
     public String returnaccession() {
 
         if (fileinfo == null) {
@@ -276,6 +308,10 @@ public class Readfile {
 
     }
 
+    /**
+     * return genome info from fasta header
+     * @return 
+     */
     public String returninfo() {
 
         if (fileinfo == null) {
