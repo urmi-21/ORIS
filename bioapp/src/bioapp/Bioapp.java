@@ -23,7 +23,7 @@ import javax.swing.*;
  *
  * @author urmi
  * 
- * This is the main class for ORIS
+ * This is the main class for ORIS. All classes in this package provide GUI to functions available in the genelib package.
  */
 public class Bioapp  {
 //the pictures
@@ -66,7 +66,7 @@ public class Bioapp  {
     }
 
     private static void appInit() {
-        //splash screen for 3 secs
+        //show splash screen for 3 secs
         for (int i = 1; i <= 3; i++) {
 
             try {

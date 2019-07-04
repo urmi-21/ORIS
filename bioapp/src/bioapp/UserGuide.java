@@ -9,6 +9,7 @@ import javax.swing.ImageIcon;
 /**
  *
  * @author jnu
+ * This class is an inbuilt user guide
  */
 public class UserGuide extends javax.swing.JFrame {
 ImageIcon img = new ImageIcon("images/icons/orislogo.png");

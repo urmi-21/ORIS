@@ -49,7 +49,8 @@ import javax.swing.text.*;
 
 /**
  *
- * @author slim
+ * @author urmi
+ * This is the main display form for ORIS.
  */
 public class Form2 extends javax.swing.JFrame {
 
@@ -79,7 +80,7 @@ public class Form2 extends javax.swing.JFrame {
         String fileSeparator = System.getProperty("file.separator");
         String newDir = path + fileSeparator;
 
-        //File f = new File(path + "\\settings.cfg");
+        //parse settings.cfg file
         //for windows
         File f = new File(path + "/settings.cfg");
         if (f.exists()) {
