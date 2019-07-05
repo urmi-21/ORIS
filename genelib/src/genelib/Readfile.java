@@ -331,20 +331,14 @@ public class Readfile {
                 if (ctr < 4) {
                     continue;
                 } else if (ctr >= 4) {
-
                     info.append(gichar[i]);
-
                 }
-
             }
-
             if (info.length() - 1 >= 0) {
                 return info.substring(1);
             } else {
                 return "No data available";
             }
-
         }
-
     }
 }
