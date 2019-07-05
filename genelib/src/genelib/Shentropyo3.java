@@ -33,6 +33,14 @@ public class Shentropyo3 extends Thread {
     int saveflag;
     String filename;
 
+     /**
+     * 
+     * @param seq DNA sequence
+     * @param wsize window size
+     * @param inc increment size
+     * @param save save flag
+     * @param fname filename to save results
+     */
     public Shentropyo3(char[] seq, int wsize, int inc, int save, String fname) {
         sequence = seq;
         winsize = wsize;

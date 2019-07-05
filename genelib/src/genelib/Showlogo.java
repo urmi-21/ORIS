@@ -32,10 +32,9 @@ import javax.swing.LayoutStyle;
 
 /**
  *
- * @author slim
+ * @author urmi
  */
 public class Showlogo extends Thread {
-
     final float[][] logodata;
     final int seqlength;
     int totalmatches;
@@ -43,6 +42,16 @@ public class Showlogo extends Thread {
     String searchseq;
     String mismatches;
     ImageIcon img = new ImageIcon("images/icons/orislogo.png");
+    
+    /**
+     * 
+     * @param mat matrix with rows as DNA nucleotides and columns as positions in motif. each i,j element is the proportion of ith nucleotide at jth position.
+     * @param l length of the sequence
+     * @param total total matches
+     * @param exact number of exact matches
+     * @param str sequence searched
+     * @param tolerance mismatches allowed
+     */
     public Showlogo(float[][] mat, int l,int total,int exact,String str,String tolerance) {
         logodata = mat;
         seqlength = l;
@@ -54,23 +63,12 @@ public class Showlogo extends Thread {
 
     public void run() {
 
-        JFrame frame = new JFrame("Logo");
-        /* JMenuBar menuBar = new JMenuBar();
-         JMenu fileMenu = new JMenu("File");
-         JMenu editMenu = new JMenu("Edit");
-         JMenu viewMenu = new JMenu("View");
-         menuBar.add(fileMenu);
-         menuBar.add(editMenu);
-         menuBar.add(viewMenu);
-         */
-        
+        JFrame frame = new JFrame("Logo");       
         frame.setIconImage(img.getImage());
         
         loadimage ob = new loadimage(logodata, seqlength);
         frame.add(ob);
-
-
-
+        
         JComboBox formats = new JComboBox(ob.getFormats());
         JButton savebutton = new JButton("Save");
         formats.setActionCommand("Formats");
@@ -111,6 +109,11 @@ class loadimage extends Component implements ActionListener {
     float[][] data;
     int seqlen;
 
+    /**
+     * 
+     * @param a matrix containing match information
+     * @param len length of motif searched
+     */
     public loadimage(float[][] a, int len) {
 
         data = a;
@@ -126,6 +129,7 @@ class loadimage extends Component implements ActionListener {
 
     }
 
+    //create sequence logo by scaling individual images
     public void paint(Graphics g) {
 
         //ordering index
@@ -134,11 +138,7 @@ class loadimage extends Component implements ActionListener {
         float max = -1;
         int xpos = 0;
         //Font f=new Font(Font.SANS_SERIF,Font.CENTER_BASELINE , 80);
-
-
         Graphics g1 = result.getGraphics();
-
-
         BufferedImage[] images = new BufferedImage[4];
         images[0] = img1;
         images[1] = img2;
@@ -214,14 +214,7 @@ class loadimage extends Component implements ActionListener {
             char[] posdata = pos.toCharArray();
             g1.drawChars(posdata, 0, posdata.length, xpos + 10, 15 + sizea + sizeb + sizec + sized);
             g.drawChars(posdata, 0, posdata.length, xpos + 10, 15 + sizea + sizeb + sizec + sized);
-
-
-
-
-
-            //   System.out.println("Update y");
             xpos = xpos + 80;
-
         }
 
 
@@ -240,11 +233,6 @@ class loadimage extends Component implements ActionListener {
 
     @Override
     public void actionPerformed(ActionEvent e) {
-        // JComboBox cb = (JComboBox)e.getSource();
-
-
-
-
         /* Save the filtered image in the selected format.
          * The selected item will be the name of the format to use
          */
