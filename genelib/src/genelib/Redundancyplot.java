@@ -124,7 +124,7 @@ public class Redundancyplot extends Thread {
             countT = sob2.returncount(subsequence, 'T');
 
 
-            // calculate pilogpi
+            // calculate entropy
             pa = ((double) countA / (double) subsequence.length);
             pa = pa * (Math.log(pa) / Math.log(2));
             pc = ((double) countC / (double) subsequence.length);

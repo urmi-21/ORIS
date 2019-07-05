@@ -39,7 +39,7 @@ import javax.swing.JTextField;
 import javax.swing.text.Position;
 
 /**
- *
+ *Class to search DNA motifs
  * @author jnu
  */
 public class Searchseq extends Thread {
@@ -70,6 +70,17 @@ public class Searchseq extends Thread {
     List<String> motifs;
     List<Double> pvals;
 
+    /**
+     * 
+     * @param val
+     * @param tosearch
+     * @param tval
+     * @param lstatus
+     * @param sstatus
+     * @param save
+     * @param filename
+     * @param supressmessage 
+     */
     public Searchseq(char[] val, char[] tosearch, int tval, int lstatus, int sstatus, int save, String filename, boolean supressmessage) {
         sequence = val;
         suppressmessage = supressmessage;
