@@ -18,8 +18,8 @@ import javax.swing.JOptionPane;
 import javax.swing.JProgressBar;
 
 /**
- *
- * @author jnu
+ *Class to make the redundancy plot
+ * @author urmi
  */
 public class Redundancyplot extends Thread {
 
@@ -33,6 +33,15 @@ public class Redundancyplot extends Thread {
     int saveflag;
     String filename;
 
+    
+    /**
+     * 
+     * @param seq DNA sequence
+     * @param wsize window size
+     * @param inc increment size
+     * @param save save flag
+     * @param fname filename to save results
+     */
     public Redundancyplot(char[] seq, int wsize, int inc, int save, String fname) {
         sequence = seq;
         winsize = wsize;
@@ -43,9 +52,7 @@ public class Redundancyplot extends Thread {
 
     @Override
     public void run() {
-
         int start = 0, totlwin = 0;
-
         //if savefile is required 
         BufferedWriter writer = null;
         String tmpindex;
@@ -139,7 +146,6 @@ public class Redundancyplot extends Thread {
                 //  pBar.update(pBar.getGraphics());
             }
         }
-
         frame.dispose();
         if (saveflag == 1) {
             for (int i = 0; i < redundancyres.length; i++) {
@@ -152,7 +158,6 @@ public class Redundancyplot extends Thread {
                 }
             }
         }
-
         //after writing
         if (saveflag == 1) {
             try {
