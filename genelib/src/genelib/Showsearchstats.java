@@ -13,8 +13,8 @@ import javax.swing.JProgressBar;
 import org.math.plot.Plot2DPanel;
 
 /**
- *
- * @author slim
+ *Class to plot number of search hits along the genome
+ * @author urmi
  */
 public class Showsearchstats extends Thread {
 
@@ -28,7 +28,15 @@ public class Showsearchstats extends Thread {
     ImageIcon img = new ImageIcon("images/icons/orislogo.png");
     
 
-    //List p is binary containing 1 or 0 where i is a match and 0 is mismatch in the orignal sequencea
+    
+    /**
+     * 
+     * @param seq DNA sequence
+     * @param p List p is binary containing 1 or 0 where i is a match and 0 is mismatch in the orignal sequencea
+     * @param tsize mismatches allowed
+     * @param wsize window size to plot results
+     * @param inc  increment to plot results
+     */
     public Showsearchstats(char[] seq, List p, int tsize, int wsize, int inc) {
         orignalseq = seq;
         windowsize = wsize;
@@ -44,16 +52,12 @@ public class Showsearchstats extends Thread {
             posarray[i] = val;
             //lindex++;
         }
-
-
     }
 
     @Override
     public void run() {
-
         int v = 1;
         int sum = 0;
-
         int totlwin = 0;
         int start = 0;
         for (start = 0; start + windowsize <= totallen; start = start + increment) {
@@ -100,7 +104,6 @@ public class Showsearchstats extends Thread {
 
         }
         frame.dispose();
-
         //create plot object
         Plot newplot = new Plot();
         newplot.doplot(orignalseq, xaxis, cgcresults, "Search statics", "Window Number", "Number of Matches", windowsize, increment);
