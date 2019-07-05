@@ -72,14 +72,14 @@ public class Searchseq extends Thread {
 
     /**
      * 
-     * @param val
-     * @param tosearch
-     * @param tval
-     * @param lstatus
-     * @param sstatus
-     * @param save
-     * @param filename
-     * @param supressmessage 
+     * @param val DNA sequence
+     * @param tosearch query motif sequence to be searched
+     * @param tval Num of mismatches allowd
+     * @param lstatus Flag: Plot a sequence logo
+     * @param sstatus Flag: Plot a hits along the length of DNA sequence
+     * @param save Flag: save results to file
+     * @param filename filename to save results
+     * @param supressmessage Flag: show messages and progress bar
      */
     public Searchseq(char[] val, char[] tosearch, int tval, int lstatus, int sstatus, int save, String filename, boolean supressmessage) {
         sequence = val;
@@ -105,11 +105,9 @@ public class Searchseq extends Thread {
 
     @Override
     public void run() {
-
-        int i, j, k, flag = 0, pos = 0;
+        int i, j, k, flag = 0;
         int mismatch = 0;
         excatmatches = 0;
-
         if (sequence == null) {
             JOptionPane.showMessageDialog(null, "Fatal Error No file Read");
             return;
@@ -173,10 +171,8 @@ public class Searchseq extends Thread {
             }
 
         }
-
         //mat is the matrix used in logo
         float[][] mat = new float[4][tpos];
-
         //START Search
         for (i = 0; i < sequence.length - subseq.length + 1; ++i) {
             //System.out.println(i);
@@ -184,21 +180,18 @@ public class Searchseq extends Thread {
             k = 0;
             mismatch = 0;
             for (j = i; k < subseq.length; j++) {
-
                 if ((subseq[k] == 'X') || (sequence[j] == subseq[k]) || (subseq[k] == 'Y' && (sequence[j] == 'C' || sequence[j] == 'T')) || (subseq[k] == 'R' && (sequence[j] == 'A' || sequence[j] == 'G')) || (subseq[k] == 'W' && (sequence[j] == 'A' || sequence[j] == 'T')) || (subseq[k] == 'S' && (sequence[j] == 'C' || sequence[j] == 'G')) || (subseq[k] == 'K' && (sequence[j] == 'T' || sequence[j] == 'G')) || (subseq[k] == 'M' && (sequence[j] == 'C' || sequence[j] == 'A'))) {
                     flag = 1;
                     k++;
                 } else {
                     mismatch++;
                     k++;
-
                 }
                 //if mismathes excedes tolerance it is not a match
                 if (mismatch > tolerance) {
                     flag = 0;
                     break;
                 }
-
             }
 
             if (flag == 1) {
@@ -210,7 +203,6 @@ public class Searchseq extends Thread {
                         tmpindex = String.valueOf(i + 1);
                         writer.write(tmpindex);
                         writer.write("\t");
-
                     }
                     //add 1 to positins list where 1 means a match
                     positions.add(1);
@@ -318,10 +310,6 @@ public class Searchseq extends Thread {
             }
         }
 
-        //System.out.printf("Found %d times at", total);
-        //System.out.println(positions);
-        //normalize the matrix matrix
-        //System.out.println("Normalized Matrix");
         for (i = 0; i < 4; i++) {
             for (j = 0; j < subseq.length; j++) {
                 mat[i][j] = mat[i][j] / total;
@@ -335,7 +323,6 @@ public class Searchseq extends Thread {
                 JOptionPane.showMessageDialog(null, "No Matches");
             }
         }
-
         if (printlogo == 1 && total != 0) {
             StringBuilder str = new StringBuilder();
             for (int x = 0; x < subseq.length; x++) {
@@ -392,24 +379,25 @@ public class Searchseq extends Thread {
         }
 
         if (showstat == 0 && printlogo == 0 && total != 0) {
-
             listtoarray();
         }
 
-//        System.out.println("Excat=" + excatmatches);
+
     }
 
-    //creates a postion array of matches for hilighting results in the main form
+    //creates a postion array of matches for hilighting results in the sequence displayed in the main form
     void listtoarray() {
-
         posarray = new int[matchpositions.size()];
         for (int i = 0; i < matchpositions.size(); i++) {
             String s = matchpositions.get(i).toString();
             posarray[i] = Integer.parseInt(s);
         }
-
     }
-
+    
+    /**
+     * Return total matches
+     * @return 
+     */
     public int returnTotal() {
         return total;
     }
