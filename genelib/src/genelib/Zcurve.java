@@ -19,8 +19,8 @@ import org.math.plot.Plot2DPanel;
 import org.math.plot.Plot3DPanel;
 
 /**
- *
- * @author jnu
+ *Class to implement the z-curve method
+ * @author urmi
  */
 public class Zcurve extends Thread {
 
@@ -28,6 +28,16 @@ public class Zcurve extends Thread {
     int d2d, d3d,saveflag,winsize;
     String filename;
    ImageIcon img = new ImageIcon("images/icons/orislogo.png");
+   
+   /**
+    * 
+    * @param val DNA sequence
+    * @param wsize window size
+    * @param threed flag from 3d plot
+    * @param twod flag for 2d plot
+    * @param save save flag
+    * @param fname filename to save 
+    */
     public Zcurve(char[] val, int wsize, int threed, int twod,int save,String fname) {
         sequence = val;
         d3d = threed;
@@ -143,6 +153,12 @@ public class Zcurve extends Thread {
 
     }
 
+    /**
+     * Draw x and y components on 2d plane
+     * @param axis
+     * @param x
+     * @param y 
+     */
     private void draw2d(double[] axis, double[] x, double[] y) {
         // create your PlotPanel (you can use it as a JPanel) with a legend at SOUTH
         Plot2DPanel plot = new Plot2DPanel("SOUTH");
@@ -174,6 +190,12 @@ public class Zcurve extends Thread {
 
     }
 
+    /**
+     * function to draw 3d z-curve
+     * @param x
+     * @param y
+     * @param z 
+     */
     private void draw3d(double[] x, double[] y, double[] z) {
         // create your PlotPanel (you can use it as a JPanel) with a legend at SOUTH
         Plot3DPanel plot = new Plot3DPanel("SOUTH");

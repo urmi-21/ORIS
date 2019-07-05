@@ -8,7 +8,7 @@ import javax.swing.JOptionPane;
 
 /**
  *
- * @author jnu
+ * @author urmi
  */
 public class wholegenomeshannon extends Thread {
 

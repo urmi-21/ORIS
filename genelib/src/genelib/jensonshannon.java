@@ -18,8 +18,8 @@ import javax.swing.JOptionPane;
 import javax.swing.JProgressBar;
 
 /**
- *
- * @author jnu
+ *Class for Jenson-Shannon divergence
+ * @author urmi
  */
 public class jensonshannon extends Thread {
 
@@ -32,6 +32,13 @@ public class jensonshannon extends Thread {
     int saveflag;
     String filename;
 
+     /**
+     * 
+     * @param seq DNA sequence
+     * @param inc increment size
+     * @param save save flag
+     * @param fname filename to save results
+     */
     public jensonshannon(char[] seq, int inc, int save, String fname) {
         sequence = seq;
         increament = inc;
@@ -66,8 +73,6 @@ public class jensonshannon extends Thread {
                 Logger.getLogger(Searchseq.class.getName()).log(Level.SEVERE, null, ex);
             }
         }
-
-
         //get size to store all the results from each window
         for (start = 1; start < sequence.length; start = start + increament) {
             totlval++;

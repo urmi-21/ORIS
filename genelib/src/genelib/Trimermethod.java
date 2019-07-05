@@ -18,8 +18,8 @@ import javax.swing.JOptionPane;
 import javax.swing.JProgressBar;
 
 /**
- *
- * @author slim
+ *Class to implement the DNA bending analysis
+ * @author urmi
  */
 public class Trimermethod extends Thread {
 
@@ -37,14 +37,23 @@ public class Trimermethod extends Thread {
     private JProgressBar pBar = new JProgressBar();
     ImageIcon img = new ImageIcon("images/icons/orislogo.png");
 
+    /**
+     * 
+     * @param seq DNA sequence
+     * @param winsize window size
+     * @param increment increment size
+     * @param strt start position
+     * @param end end position
+     * @param save save flag
+     * @param fname filename to save
+     */
     public Trimermethod(char[] seq, int winsize,int increment, int strt, int end, int save, String fname) {
 
         int k = 0;
         windowsize = winsize;
         inc=increment;
         sequence = new char[end - strt + 1];
-
-        //copy the origin sequence for which we want to do bending analysis in to array "sequence"
+       //copy the origin sequence for which we want to do bending analysis in to array "sequence"
         //map the positions starting from 1 to indexes starting from 0
         //hence start=start-1
         for (int i = strt - 1; i < end; i++) {
@@ -52,8 +61,7 @@ public class Trimermethod extends Thread {
             sequence[k] = seq[i];
             k++;
         }
-        
-        
+
         oristart = strt;
         oriend = end;
 
@@ -61,15 +69,10 @@ public class Trimermethod extends Thread {
             filename = fname;
             saveflag = 1;
         }
-
-
-
     }
 
     public void run() {
-
-
-        int numtrimers = 0;
+       int numtrimers = 0;
         int totlwin = 0, start = 0;
         char[] subsequence = new char[windowsize];
 
@@ -82,13 +85,7 @@ public class Trimermethod extends Thread {
         double[] xaxis = new double[totlwin];
         char[] trimer = new char[3];
         StringBuilder trimerstr = new StringBuilder(3);
-        //if (sequence == null) {
-        //  JOptionPane.showMessageDialog(null, "Fatal Error No file Read");
-        // return;
-        // }
-
-        // char[] sequence = {'A', 'C', 'G', 'G', 'T', 'T', 'A', 'C', 'T'};
-
+       
         //if savefile is required 
         BufferedWriter writer = null;
         String tmpindex;
@@ -115,11 +112,6 @@ public class Trimermethod extends Thread {
         }
 
 
-
-
-
-
-
         //for progress bar
         Dimension screenSize = Toolkit.getDefaultToolkit().getScreenSize();
         int width = (int) screenSize.getWidth();
@@ -141,7 +133,6 @@ public class Trimermethod extends Thread {
         double sum = 0;
         int k = 0;
         int increment=inc;
-
 
         //calculate all trimers for each window and add them to get the value for that window
         for (start = 0; start + windowsize <= sequence.length; start = start + increment) {
@@ -179,11 +170,6 @@ public class Trimermethod extends Thread {
             xaxis[k] = k + 1;
             results[k++] = sum;
 
-
-            //System.out.printf("\nVal of trimen %s \t %f ", trimerstr.toString(), results[k]);
-
-
-
             //update progress bar
             if (k % 10000 == 0) {
 
@@ -206,7 +192,6 @@ public class Trimermethod extends Thread {
             }
         }
 
-
         //after writing
         if (saveflag == 1) {
             try {
@@ -217,12 +202,9 @@ public class Trimermethod extends Thread {
             }
         }
 
-
-
         //create plot object
         Plot newplot = new Plot();
         newplot.doplot(sequence, xaxis, results, "Bending results", "Window number", "Bendability", windowsize, 1);
-
 
     }
 }
