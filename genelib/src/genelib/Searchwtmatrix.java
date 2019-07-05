@@ -18,8 +18,8 @@ import javax.swing.JOptionPane;
 import javax.swing.JProgressBar;
 
 /**
- *
- * @author slim
+ *Class for weight matrix search
+ * @author urmi
  */
 public class Searchwtmatrix extends Thread {
 
@@ -32,7 +32,16 @@ public class Searchwtmatrix extends Thread {
     final JFrame frame = new JFrame("Progress");
     private JProgressBar pBar = new JProgressBar();
     ImageIcon img = new ImageIcon("images/icons/orislogo.png");
-
+    
+    /**
+     * 
+     * @param s input sequence
+     * @param mat weight matrix
+     * @param row num rows
+     * @param col num cols
+     * @param tval mismatch allowed
+     * @param fname filename to save results
+     */
     public Searchwtmatrix(char[] s, float[][] mat, int row, int col, float tval, String fname) {
         seq = s;
         wtmatrix = mat;

@@ -18,8 +18,8 @@ import javax.swing.JOptionPane;
 import javax.swing.JProgressBar;
 
 /**
- *
- * @author jnu
+ *calculate order 2 entropy
+ * @author urmi
  */
 public class Shentropyo2 extends Thread {
 
@@ -33,6 +33,14 @@ public class Shentropyo2 extends Thread {
     int saveflag;
     String filename;
 
+    /**
+     * 
+     * @param seq DNA sequence
+     * @param wsize window size
+     * @param inc increment size
+     * @param save save flag
+     * @param fname filename to save results
+     */
     public Shentropyo2(char[] seq, int wsize, int inc, int save, String fname) {
         sequence = seq;
         winsize = wsize;

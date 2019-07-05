@@ -18,8 +18,8 @@ import javax.swing.JOptionPane;
 import javax.swing.JProgressBar;
 
 /**
- *
- * @author jnu
+ *Order 1 shannon entropy
+ * @author urmi
  */
 public class Shentropyo1 extends Thread {
 
@@ -37,6 +37,15 @@ public class Shentropyo1 extends Thread {
     String filename;
     public double[] entropydata = null;
 
+    /**
+     * 
+     * @param seq DNA sequence
+     * @param wsize window size
+     * @param inc increment size
+     * @param save save flag
+     * @param fname filename to save results
+     * @param flag flag to calculate different entropies 0: use AGCT 1: use GC 2: use AT
+     */
     public Shentropyo1(char[] seq, int wsize, int inc, int save, String fname, int flag) {
         sequence = seq;
         winsize = wsize;
@@ -121,7 +130,7 @@ public class Shentropyo1 extends Thread {
 
             if (enflag == 0) {
                 //calculate with AGCT
-// calculate pilogpi
+                // calculate entropy
                 pa = ((double) countA / (double) subsequence.length);
                 pa = pa * (Math.log(pa) / Math.log(2));
                 pc = ((double) countC / (double) subsequence.length);
@@ -140,7 +149,6 @@ public class Shentropyo1 extends Thread {
                 pc = pc * (Math.log(pc) / Math.log(2));
                 pg = ((double) countG / ((double) (subsequence.length) - countA - countT));
                 pg = pg * (Math.log(pg) / Math.log(2));
-
                 xaxis[rindex] = rindex + 1;
                 enresults[rindex] = -1 * (pc + pg);
             } else if (enflag == 2) {
@@ -150,7 +158,6 @@ public class Shentropyo1 extends Thread {
                 pa = pa * (Math.log(pa) / Math.log(2));
                 pt = ((double) countT / ((double) (subsequence.length) - countG - countC));
                 pt = pt * (Math.log(pt) / Math.log(2));
-
                 xaxis[rindex] = rindex + 1;
                 enresults[rindex] = -1 * (pa + pt);
             }
