@@ -7,19 +7,29 @@
             <file>file:/C:/Users/mrbai/Documents/GitHub/ORIS/genelib/src/genelib/Searchseq.java</file>
             <file>file:/C:/Users/mrbai/Documents/GitHub/ORIS/genelib/src/genelib/ATskew.java</file>
             <file>file:/C:/Users/mrbai/Documents/GitHub/ORIS/genelib/src/genelib/CummATskew.java</file>
-            <file>file:/C:/Users/mrbai/Documents/GitHub/ORIS/genelib/src/genelib/Correlationmultithreaded.java</file>
-            <file>file:/C:/Users/mrbai/Documents/GitHub/ORIS/genelib/src/genelib/Createseqalignmentfile.java</file>
+            <file>file:/C:/Users/mrbai/Documents/GitHub/ORIS/genelib/src/genelib/Zcurve.java</file>
             <file>file:/C:/Users/mrbai/Documents/GitHub/ORIS/genelib/src/genelib/CummGCskew.java</file>
             <file>file:/C:/Users/mrbai/Documents/GitHub/ORIS/genelib/src/genelib/ComputePvals.java</file>
-            <file>file:/C:/Users/mrbai/Documents/GitHub/ORIS/genelib/src/genelib/Redundancyplot.java</file>
             <file>file:/C:/Users/mrbai/Documents/GitHub/ORIS/genelib/src/genelib/Func.java</file>
             <file>file:/C:/Users/mrbai/Documents/GitHub/ORIS/genelib/src/genelib/Entropy.java</file>
-            <file>file:/C:/Users/mrbai/Documents/GitHub/ORIS/genelib/src/genelib/Customformula.java</file>
             <file>file:/C:/Users/mrbai/Documents/GitHub/ORIS/genelib/src/genelib/CummRYskew.java</file>
             <file>file:/C:/Users/mrbai/Documents/GitHub/ORIS/genelib/src/genelib/MKskew.java</file>
+            <file>file:/C:/Users/mrbai/Documents/GitHub/ORIS/genelib/src/genelib/wholegenomeshannon.java</file>
+            <file>file:/C:/Users/mrbai/Documents/GitHub/ORIS/genelib/src/genelib/Searchwtmatrix.java</file>
             <file>file:/C:/Users/mrbai/Documents/GitHub/ORIS/genelib/src/genelib/Crosscorrelation.java</file>
-            <file>file:/C:/Users/mrbai/Documents/GitHub/ORIS/genelib/src/genelib/Entropygx.java</file>
+            <file>file:/C:/Users/mrbai/Documents/GitHub/ORIS/genelib/src/genelib/Trimermethod.java</file>
             <file>file:/C:/Users/mrbai/Documents/GitHub/ORIS/genelib/src/genelib/RYskew.java</file>
+            <file>file:/C:/Users/mrbai/Documents/GitHub/ORIS/genelib/src/genelib/Showsearchstats.java</file>
+            <file>file:/C:/Users/mrbai/Documents/GitHub/ORIS/genelib/src/genelib/Shentropyo3.java</file>
+            <file>file:/C:/Users/mrbai/Documents/GitHub/ORIS/genelib/src/genelib/jensonshannon.java</file>
+            <file>file:/C:/Users/mrbai/Documents/GitHub/ORIS/genelib/src/genelib/Correlationmultithreaded.java</file>
+            <file>file:/C:/Users/mrbai/Documents/GitHub/ORIS/genelib/src/genelib/Createseqalignmentfile.java</file>
+            <file>file:/C:/Users/mrbai/Documents/GitHub/ORIS/genelib/src/genelib/Redundancyplot.java</file>
+            <file>file:/C:/Users/mrbai/Documents/GitHub/ORIS/genelib/src/genelib/Showlogo.java</file>
+            <file>file:/C:/Users/mrbai/Documents/GitHub/ORIS/genelib/src/genelib/Customformula.java</file>
+            <file>file:/C:/Users/mrbai/Documents/GitHub/ORIS/genelib/src/genelib/Shentropyo1.java</file>
+            <file>file:/C:/Users/mrbai/Documents/GitHub/ORIS/genelib/src/genelib/Entropygx.java</file>
+            <file>file:/C:/Users/mrbai/Documents/GitHub/ORIS/genelib/src/genelib/Shentropyo2.java</file>
             <file>file:/C:/Users/mrbai/Documents/GitHub/ORIS/genelib/src/genelib/Correlationwholegenome.java</file>
             <file>file:/C:/Users/mrbai/Documents/GitHub/ORIS/genelib/src/genelib/CummMKskew.java</file>
             <file>file:/C:/Users/mrbai/Documents/GitHub/ORIS/genelib/src/genelib/EnumerationScheme.java</file>
