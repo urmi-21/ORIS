@@ -1,0 +1,2 @@
+genelib.loadimage
+genelib.Showlogo
