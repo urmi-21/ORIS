@@ -1,9 +1,9 @@
 ---
-title: 'ORIS: '
+title: 'ORIS: An interactive software tool for prediction of replication origin in prokaryotic genomes'
 tags:
   - Origin of replication
   - Whole genome analysis
-  - Bacterial genome
+  - GC-Skew
 authors:
  - name: Urminder Singh
    orcid: 0000-0003-3703-0820
@@ -29,49 +29,21 @@ bibliography: paper.bib
 
 # Summary
 
-A remarkable yet very precise event that takes place within the cell
-, is called DNA replication or chromosome copy \cite{BruceA}.
-The way it is done in eukaryotes is vastly different from prokaryotes
-yet something is common as well. Molecular replication machinery is
-complex and very less is understood in terms of its structure and
-function \cite{genex}. The binding of Origin Recognition Complex protein
-(ORC) enables recruitment of the recognition complexes such as CDCs
-and MCMs(mini chromosome maintenance) to carry out the process. In simple terms, the origin of
-replication is a small segment in the genome at which the replication process
-is initiated. 
+A remarkable yet very precise event that takes place within the cell, is called DNA replication or chromosome copy [@alberts2013essential].
+The way it is done in eukaryotes is vastly different from prokaryotes yet something is common as well. Molecular replication machinery is complex and very less is understood in terms of its structure and function [@krebs2013lewin]. The binding of Origin Recognition Complex protein (ORC) enables recruitment of the recognition complexes such as CDCs and MCMs (mini chromosome maintenance) to carry out the process.
+In simple terms, the origin of replication is a small segment in the genome at which the replication process is initiated. 
 
-Bacterial genomes generally have a single origin of DNA replication
-whereas archea and eukaryotes have multiple replication sites and this organizational
-structure may be needed to complete the replication task within the
-single `S' phase of the cell
-cycle \cite{Odonnel,EganES}. Experimental studies carried out on
-the model organism \emph{S. cerevisiae} brought out greater insights
-in understanding the complex replication process. A typical origin
-sequence in \emph{S. cerevisiae} has a DNA segment called `Autonomous
-Replication Sequence (ARS)' and this further has
-an essential `A' element and
-multiple `B' elements and all
-these are required for proper origin function or firing. This kind
-of organizational structure may be there in other eukaryotic genome
-sequences but they are not very obvious. We will have to exploit this contextual information
-as part of our computational searches. Hence, software modules should be
-developed incorporating many such useful contextual information for
-sequence analysis, with the hope that biologists will benefit and
-it may provide them a helping hand to search for origin like sequences
-in any genome of their choice. 
+Bacterial genomes generally have a single origin of DNA replication whereas archea and eukaryotes have multiple replication sites and this organizational structure may be needed to complete the replication task within the single `S' phase of the cell cycle [@o2013principles; @egan2005microreview]. 
+Experimental studies carried out on the model organism *S. cerevisiae* brought out greater insights in understanding the complex replication process. A typical origin sequence in *S. cerevisiae* has a DNA segment called `Autonomous Replication Sequence (ARS)' and this further has an essential `A' element and multiple `B' elements and all these are required for proper origin function or firing. 
+This kind of organizational structure may be there in other eukaryotic genomes but they are not very obvious. We will have to exploit this contextual information as part of our computational searches. 
+Hence, software modules should be developed incorporating many such useful contextual information for sequence analysis, with the hope that biologists will benefit and it may provide them a helping hand to search for origin like sequences in any genome of their choice. 
 
-There are few online software tools which may help
-in finding the origin sites \cite{CarolineF,orifinder}, which uses or implements skew measures, random walk and specific motif search.
-An effort is made to develop a software suite that does context based analysis which includes DSP (digital signal processing) based correlation measures, all types of skew measures and entropy based methods for predicting
-the origin of replication \cite{Beauchamp,chari}. In addition features such as pattern matching,
-generating sequence logo, finding entropy distribution along the length
-of the genome, DNA bending profiles and composition statistics are also available as part of analysis. To best of our
-knowledge our software package is novel in that sense and will be a useful tool
-for origin finding across bacteria, archaea and to some extent eukaryotes. Our tool runs on the local machine, thus ensures security as no data has to transmitted over the internet.
+There are a few online tools/databases which may help in finding the origin of replication sites for a few species [@frank2000oriloc; @gao2008ori]. In this paper we present a standalone software tool, ORIS, for interactive analysis of prokaryotic genomes in order to find the origin of replication sites in the genome.
+An effort is made to develop a software suite that does context based analysis which includes DSP (digital signal processing) based correlation measures, all types of skew measures and entropy based methods for predicting the origin of replication [@beauchamp1979digital; @shah2012nucleotide].
+In addition features such as pattern matching, generating sequence logo, finding entropy distribution along the length of the genome, DNA bending profiles and composition statistics are also available as part of analysis. 
 
-
-
-
+ORIS is a novel tool that lets the user interactively explore the whole genome sequence data using a number of computational methods and charts. ORIS is well suited for origin finding across bacteria, archaea and to some extent eukaryotes [@agarwal2017identification].
+We have described applicability of our tool, ORIS, in a case study available at XXX. The method details could be found here XXX. A user guide is available from XXX.
 
 # Acknowledgements
 US would like to thank the help and facilities provided by South Asian
