@@ -12,11 +12,14 @@ Coming Soon...
 
 ## Examples
 
-### Ex1
+### Reading Genome Data
 
 
 
-### EX2
+### Plotting GC-Skew
+
+
+### Searching Motifs
 
 
 
