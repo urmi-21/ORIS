@@ -1381,7 +1381,10 @@ public class PredictOric extends Thread {
         String ls = System.getProperty("line.separator");
 
         try {
-
+            if(filepath==null||filepath.length()<1){
+                JOptionPane.showMessageDialog(null, "Please enter a valid file path", "File not found", JOptionPane.ERROR_MESSAGE);
+                return null;
+            }
             String sCurrentLine;
             br = new BufferedReader(new FileReader(filepath));
             while ((sCurrentLine = br.readLine()) != null) {
