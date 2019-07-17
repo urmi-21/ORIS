@@ -36,7 +36,7 @@ public class Entropygx extends Thread {
 
     /**
      * 
-     * @param val DNA sequence
+     * @param seq DNA sequence
      * @param ch nucleotide or sequence to treat as different class
      * @param wsize window size
      * @param inc increment size

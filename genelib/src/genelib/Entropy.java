@@ -35,8 +35,8 @@ public class Entropy extends Thread {
     
     /**
      * 
-     * @param val DNA sequence
-     * @param ws window size
+     * @param seq DNA sequence
+     * @param wsize window size
      * @param inc increment size
      * @param save save flag
      * @param fname filename to save results

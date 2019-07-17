@@ -88,7 +88,7 @@ public class Func {
     }
 
     /**
-     * @param orgseq input DNA sequence
+     * @param Orgseq input DNA sequence
      * @return ATskew value
      */
     public float ATskew(char[] Orgseq) {
@@ -109,7 +109,7 @@ public class Func {
     }
 
     /**
-     * @param orgseq input DNA sequence
+     * @param Orgseq input DNA sequence
      * @return MKskew value
      */
     public float MKskew(char[] Orgseq) {
@@ -137,7 +137,7 @@ public class Func {
     }
     
     /**
-     * @param orgseq input DNA sequence
+     * @param Orgseq input DNA sequence
      * @return RYskew value
      */
     public float RYskew(char[] Orgseq) {
