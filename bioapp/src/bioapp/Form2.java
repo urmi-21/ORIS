@@ -1760,7 +1760,7 @@ public class Form2 extends javax.swing.JFrame {
     }
 
     /**
-     * @param args the command line arguments
+     * display Form2
      */
     public static void callmain() {
         /* Set the Nimbus look and feel */
