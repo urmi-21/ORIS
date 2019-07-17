@@ -1,5 +1,0 @@
-Search for the String CTCKAT	Tolerance value = 1
-StartingPosition	Motif	P-value 
-11	CTCGAT	0.03750000149011612
-15	ATCGAT	0.0595238097012043
-Total Matches= 2, Exact Matches= 1

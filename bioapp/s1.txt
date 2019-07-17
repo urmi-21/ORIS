@@ -1,8 +1,0 @@
-Weight Matrix search results 
-Number of positions/columns= 2
-Position number in sequence 	 Score 
-1				0.30000001192092896
-2				0.20000000298023224
-3				0.4000000059604645
-4				0.4000000059604645
-5				1.0

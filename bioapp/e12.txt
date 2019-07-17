@@ -1,3 +1,0 @@
-Search for the String CTCWAT	Tolerance value = 0
-StartingPosition	Motif	P-value 
-Total Matches= 0, Exact Matches= 0
