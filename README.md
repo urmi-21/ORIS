@@ -48,3 +48,9 @@ Coming Soon...
 ## License
 
 This project is licensed under the XX License - see the [LICENSE](LICENSE) file for details
+
+## Community Guidelines
+Please report all the bugs through GitHub [here](https://github.com/urmi-21/ORIS/issues).
+
+
+
