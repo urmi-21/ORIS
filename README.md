@@ -33,12 +33,6 @@ DOUBLE CLICK on the .jar file icon to start ORIS.
 
 
 
-
-## Contributing
-
-Coming Soon...
-
-
 ## Developers
 
 * **Urminder Singh**
