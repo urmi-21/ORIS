@@ -46,7 +46,7 @@ DOUBLE CLICK on the .jar file icon to start ORIS.
 
 ## License
 
-This project is licensed under the XX License - see the [LICENSE](LICENSE) file for details
+This project is licensed under the GNU GPL License - see the [LICENSE](LICENSE) file for details
 
 ## Community Guidelines
 Please report all the bugs through GitHub [here](https://github.com/urmi-21/ORIS/issues).
