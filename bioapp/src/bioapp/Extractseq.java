@@ -24,7 +24,7 @@ public class Extractseq extends javax.swing.JFrame {
      * Creates new form Extractseq
      */
     char[] sequence;
-    ImageIcon img = new ImageIcon("images/icons/orislogo.png");
+    ImageIcon img = new ImageIcon(getClass().getClassLoader().getResource("images/icons/orislogo.png"));
 
     public Extractseq(char[] seq) {
         initComponents();

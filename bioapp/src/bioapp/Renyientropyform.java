@@ -23,7 +23,7 @@ public class Renyientropyform extends javax.swing.JFrame {
     double alpha;
     int saveflag;
     String fname;
-    ImageIcon img = new ImageIcon("images/icons/orislogo.png");
+    ImageIcon img = new ImageIcon(getClass().getClassLoader().getResource("images/icons/orislogo.png"));
     public Renyientropyform(char[] orgseq,int wsize,int inc,int save,String f) {
         initComponents();
         this.setIconImage(img.getImage());

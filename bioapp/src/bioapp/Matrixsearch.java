@@ -44,7 +44,7 @@ import javax.swing.table.DefaultTableModel;
 public class Matrixsearch extends javax.swing.JFrame {
 
     BorderLayout myLayout = new BorderLayout();
-    ImageIcon img = new ImageIcon("images/icons/orislogo.png");
+    ImageIcon img = new ImageIcon(getClass().getClassLoader().getResource("images/icons/orislogo.png"));
 
     /** Creates new form Matrixsearch */
     public Matrixsearch() {

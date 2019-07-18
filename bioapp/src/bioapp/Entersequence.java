@@ -30,7 +30,7 @@ public class Entersequence extends javax.swing.JFrame {
     float[][] wtmatrix;
     int rows;
     int cols;
-    ImageIcon img = new ImageIcon("images/icons/orislogo.png");
+    ImageIcon img = new ImageIcon(getClass().getClassLoader().getResource("images/icons/orislogo.png"));
 
     public Entersequence(float[][] mat, int r, int c) {
         initComponents();

@@ -28,7 +28,7 @@ public class Formulacreator extends javax.swing.JFrame {
     int increment;
     int saveflag;
     String filename;
-    ImageIcon img = new ImageIcon("images/icons/orislogo.png");
+    ImageIcon img = new ImageIcon(getClass().getClassLoader().getResource("images/icons/orislogo.png"));
     public Formulacreator(char[] seq,int wsize, int inc,int sflag,String fname) {
         initComponents();
         this.setIconImage(img.getImage());

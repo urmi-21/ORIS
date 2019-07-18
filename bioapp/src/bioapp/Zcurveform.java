@@ -20,7 +20,7 @@ public class Zcurveform extends javax.swing.JFrame {
     /**
      * Creates new form Zcurveform
      */
-    ImageIcon img = new ImageIcon("images/icons/orislogo.png");
+    ImageIcon img = new ImageIcon(getClass().getClassLoader().getResource("images/icons/orislogo.png"));
 
     public Zcurveform() {
         initComponents();

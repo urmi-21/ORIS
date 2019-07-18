@@ -36,7 +36,7 @@ import org.math.plot.Plot2DPanel;
  */
 public class Plotcomp {
 
-    ImageIcon img = new ImageIcon("images/icons/orislogo.png");
+    ImageIcon img = new ImageIcon(getClass().getClassLoader().getResource("images/icons/orislogo.png"));
     char[] sequence;
     double[] countpyr;
     double[] countpur;

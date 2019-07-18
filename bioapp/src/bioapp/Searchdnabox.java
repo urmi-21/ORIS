@@ -7,6 +7,7 @@ package bioapp;
 import genelib.Readfile;
 import genelib.Searchseq;
 import java.awt.Color;
+import javax.imageio.ImageIO;
 import javax.swing.ImageIcon;
 import javax.swing.JFrame;
 import javax.swing.JOptionPane;
@@ -20,8 +21,11 @@ public class Searchdnabox extends javax.swing.JFrame {
     /**
      * Creates new form Searchdnabox
      */
-    ImageIcon img = new ImageIcon("images/icons/orislogo.png");
+    //ImageIcon img = new ImageIcon(ImageIO.read(getClass().getResourceAsStream("/images/icons/orislogo.png")));
+    ImageIcon img = new ImageIcon(getClass().getClassLoader().getResource("images/icons/orislogo.png"));
+    
     public Searchdnabox() {
+        
         initComponents();
         this.setTitle("Search Dna box");
         jTextFieldfname.setEditable(false);

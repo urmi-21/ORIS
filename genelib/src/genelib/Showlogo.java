@@ -41,7 +41,7 @@ public class Showlogo extends Thread {
     int exactmatches;
     String searchseq;
     String mismatches;
-    ImageIcon img = new ImageIcon("images/icons/orislogo.png");
+    ImageIcon img = new ImageIcon(getClass().getClassLoader().getResource("images/icons/orislogo.png"));
     
     /**
      * 
@@ -119,10 +119,12 @@ class loadimage extends Component implements ActionListener {
         data = a;
         seqlen = len;
         try {
-            img1 = ImageIO.read(new File("images/logo/An.png"));
-            img2 = ImageIO.read(new File("images/logo/Cn.png"));
-            img3 = ImageIO.read(new File("images/logo/Gn.png"));
-            img4 = ImageIO.read(new File("images/logo/Tn.png"));
+            //path with ImageIO.read will start with a / "/images/logo/An.png" instead of "images/logo/An.png"
+            img1 =  ImageIO.read(getClass().getResourceAsStream("/images/logo/An.png"));
+            img2 =  ImageIO.read(getClass().getResourceAsStream("/images/logo/Cn.png"));
+            img3 =  ImageIO.read(getClass().getResourceAsStream("/images/logo/Gn.png"));
+            img4 =  ImageIO.read(getClass().getResourceAsStream("/images/logo/Tn.png"));
+            
             result = new BufferedImage(seqlen * 80, 315, BufferedImage.TYPE_INT_ARGB);
         } catch (IOException e) {
         }

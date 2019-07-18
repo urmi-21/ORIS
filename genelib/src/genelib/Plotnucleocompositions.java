@@ -24,7 +24,7 @@ import javax.swing.JProgressBar;
  */
 public class Plotnucleocompositions extends Thread {
     
-    ImageIcon img = new ImageIcon("images/icons/orislogo.png");
+    ImageIcon img = new ImageIcon(getClass().getClassLoader().getResource("images/icons/orislogo.png"));
     final char[] sequence;
     final JFrame frame = new JFrame("Progress");
     private JProgressBar pBar = new JProgressBar();

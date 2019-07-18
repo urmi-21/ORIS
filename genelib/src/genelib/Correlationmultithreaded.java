@@ -32,7 +32,7 @@ import javax.swing.JProgressBar;
  */
 public class Correlationmultithreaded extends Thread {
 
-    ImageIcon img = new ImageIcon("images/icons/orislogo.png");
+    ImageIcon img = new ImageIcon(getClass().getClassLoader().getResource("images/icons/orislogo.png"));
     private int flag = 0;
     final char[] sequence;
     final JFrame frame = new JFrame("Progress");

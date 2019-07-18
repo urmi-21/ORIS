@@ -28,6 +28,7 @@ import javax.swing.border.Border;
  */
 public class Predictionform extends javax.swing.JFrame {
 
+    ImageIcon img = new ImageIcon(getClass().getClassLoader().getResource("images/icons/orislogo.png"));
     /**
      * Creates new form Predictionform
      */
@@ -47,9 +48,8 @@ public class Predictionform extends javax.swing.JFrame {
         jComboBoxmismatch.setSelectedIndex(1);
         jCheckBoxdnaA.setSelected(true);
         jComboBoxorb.setEnabled(false);
-        
-        //ImageIcon img = new ImageIcon("images/icons/orislogo.png");
-        //jButtonopenptt.setIcon(img);
+
+        this.setIconImage(img.getImage());
                 
     }
 

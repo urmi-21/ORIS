@@ -26,7 +26,7 @@ public class Crosscorelationform extends javax.swing.JFrame {
     char n1,n2;
     int saveflag;
     String fname;
-    ImageIcon img = new ImageIcon("images/icons/orislogo.png");
+    ImageIcon img = new ImageIcon(getClass().getClassLoader().getResource("images/icons/orislogo.png"));
     /** Creates new form Crosscorelationform */
     public Crosscorelationform(char[] seq,int wins,int inc,int kval,int kf,int save,String filename ) {
         initComponents();

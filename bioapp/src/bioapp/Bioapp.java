@@ -33,6 +33,7 @@ public class Bioapp  {
     
     static SplashScreen mySplash;                   // instantiated by JVM we use it to get graphics
 
+    
     Bioapp() {
        
     }

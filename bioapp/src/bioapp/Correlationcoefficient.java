@@ -17,7 +17,7 @@ public class Correlationcoefficient extends javax.swing.JFrame {
     /**
      * Creates new form Correlationcoefficient
      */
-    ImageIcon img = new ImageIcon("images/icons/orislogo.png");
+    ImageIcon img = new ImageIcon(getClass().getClassLoader().getResource("images/icons/orislogo.png"));
     char[] seq;
     int winsize;
     int inc;

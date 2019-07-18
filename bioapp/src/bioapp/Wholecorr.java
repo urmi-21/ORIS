@@ -27,7 +27,7 @@ public class Wholecorr extends javax.swing.JFrame {
     /**
      * Creates new form Wholecorr
      */
-    ImageIcon img = new ImageIcon("images/icons/orislogo.png");
+    ImageIcon img = new ImageIcon(getClass().getClassLoader().getResource("images/icons/orislogo.png"));
 
     public Wholecorr() {
         initComponents();

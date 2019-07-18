@@ -23,7 +23,7 @@ public class Correlationform extends javax.swing.JFrame {
      * Creates new form Correlationform
      */
     String tocall;
-    ImageIcon img = new ImageIcon("images/icons/orislogo.png");
+    ImageIcon img = new ImageIcon(getClass().getClassLoader().getResource("images/icons/orislogo.png"));
     int maxwinsize = Form2.sequencelength;
     //boolean flag to check the length of sequence to be passed on
     boolean len_flag = false;

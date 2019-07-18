@@ -35,7 +35,7 @@ public class Trimermethod extends Thread {
     //for progress bar
     final JFrame frame = new JFrame("Progress");
     private JProgressBar pBar = new JProgressBar();
-    ImageIcon img = new ImageIcon("images/icons/orislogo.png");
+    ImageIcon img = new ImageIcon(getClass().getClassLoader().getResource("images/icons/orislogo.png"));
 
     /**
      * 

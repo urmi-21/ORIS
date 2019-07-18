@@ -47,7 +47,7 @@ public class Skewform extends javax.swing.JFrame {
     //fname contains the save directory path later add the file name to this path
     String fname = null;
     String tocall;
-    ImageIcon img = new ImageIcon("images/icons/orislogo.png");
+    ImageIcon img = new ImageIcon(getClass().getClassLoader().getResource("images/icons/orislogo.png"));
     int maxwinsize = Form2.sequencelength;
 
     public Skewform(String option) {

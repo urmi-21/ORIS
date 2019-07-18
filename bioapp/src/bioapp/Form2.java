@@ -54,7 +54,8 @@ import javax.swing.text.*;
  */
 public class Form2 extends javax.swing.JFrame {
 
-    ImageIcon img = new ImageIcon("images/icons/orislogo.png");
+   public ImageIcon img = new ImageIcon(ImageIO.read(getClass().getResourceAsStream("/images/icons/orislogo.png")));
+   
     int filereadflag;
     SimpleAttributeSet set;
     String filedata;
@@ -64,6 +65,20 @@ public class Form2 extends javax.swing.JFrame {
     static public char PRIORITY;
     static public String DEFAULT_OPEN_DIR;
     static public String DEFAULT_SAVE_DIR;
+    
+    /*public BufferedImage getImageStream(String path){
+        try {
+            return ImageIO.read(getClass().getResourceAsStream(path));
+        } catch (IOException ex) {
+            Logger.getLogger(Form2.class.getName()).log(Level.SEVERE, null, ex);
+        }
+        return null;
+    }
+    
+    public URL getImageResource(String path){
+        return getClass().getClassLoader().getResource(path);
+       
+    }*/
 
     /**
      * Creates new form Form2
@@ -209,11 +224,14 @@ public class Form2 extends javax.swing.JFrame {
         //initialize toolbar and its buttons, icons etc.
         jToolBar1.setRollover(true);
         jToolBar1.setFloatable(false);
-        jButtonopen.setIcon(new ImageIcon("images/icons/folder.png", "open"));
-        jButtondownload.setIcon(new ImageIcon("images/icons/download.png", "download"));
-        jButtonfind.setIcon(new ImageIcon("images/icons/search.png", "search"));
-        jButtonrotateanti.setIcon(new ImageIcon("images/icons/rotateanti.png", "rotate left"));
-        jButtonrotateclock.setIcon(new ImageIcon("images/icons/rotateclock.png", "rotate right"));
+        //jButtonopen.setIcon(new ImageIcon("images/icons/folder.png", "open"));
+        jButtonopen.setIcon(new ImageIcon(getClass().getClassLoader().getResource("images/icons/folder.png"), "open"));
+                
+        jButtondownload.setIcon(new ImageIcon(getClass().getClassLoader().getResource("images/icons/download.png"), "download"));
+        jButtondownload.setIcon(new ImageIcon(getClass().getClassLoader().getResource("images/icons/download.png"), "download"));
+        jButtonfind.setIcon(new ImageIcon(getClass().getClassLoader().getResource("images/icons/search.png"), "search"));
+        jButtonrotateanti.setIcon(new ImageIcon(getClass().getClassLoader().getResource("images/icons/rotateanti.png"), "rotate left"));
+        jButtonrotateclock.setIcon(new ImageIcon(getClass().getClassLoader().getResource("images/icons/rotateclock.png"), "rotate right"));
         this.setIconImage(img.getImage());
         jLabelgenomecomposition.setForeground(Color.red);
         jLabelgenome.setForeground(Color.BLUE);

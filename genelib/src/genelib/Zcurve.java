@@ -27,7 +27,7 @@ public class Zcurve extends Thread {
     final char[] sequence;
     int d2d, d3d,saveflag,winsize;
     String filename;
-   ImageIcon img = new ImageIcon("images/icons/orislogo.png");
+   ImageIcon img = new ImageIcon(getClass().getClassLoader().getResource("images/icons/orislogo.png"));
    
    /**
     * 

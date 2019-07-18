@@ -31,7 +31,7 @@ import javax.swing.JOptionPane;
  */
 public class Settingsform extends javax.swing.JFrame {
 
-    ImageIcon img = new ImageIcon("images/icons/orislogo.png");
+    ImageIcon img = new ImageIcon(getClass().getClassLoader().getResource("images/icons/orislogo.png"));
 
     /**
      * Creates new form Settingsform

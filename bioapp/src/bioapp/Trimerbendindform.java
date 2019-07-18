@@ -23,7 +23,7 @@ import javax.swing.JOptionPane;
  */
 public class Trimerbendindform extends javax.swing.JFrame {
 
-    ImageIcon img = new ImageIcon("images/icons/orislogo.png");
+    ImageIcon img = new ImageIcon(getClass().getClassLoader().getResource("images/icons/orislogo.png"));
 
     /** Creates new form Trimerbendindform */
     public Trimerbendindform() {

@@ -1,3 +1,0 @@
-genelib.Crosscorrfunc
-genelib.Crosscorrelation
-genelib.Crosscorrcaller

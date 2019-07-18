@@ -20,7 +20,7 @@ public class Searchform extends javax.swing.JFrame {
 
     private char[] seqtosearch;
     int tval, logoval, statval, savestatus;
-    ImageIcon img = new ImageIcon("images/icons/orislogo.png");
+    ImageIcon img = new ImageIcon(getClass().getClassLoader().getResource("images/icons/orislogo.png"));
 
     /**
      * Creates new form Searchform

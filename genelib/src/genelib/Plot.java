@@ -41,7 +41,7 @@ import javax.swing.border.Border;
  */
 public class Plot {
 
-    ImageIcon img = new ImageIcon("images/icons/orislogo.png");
+    ImageIcon img = new ImageIcon(getClass().getClassLoader().getResource("images/icons/orislogo.png"));
 
     public void doplot(final char[] sequence, final double[] x, double[] y, final String winname, String xlabel, String ylabel, final int winsize, final int increament) {
         // create your PlotPanel (you can use it as a JPanel)

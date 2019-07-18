@@ -44,7 +44,7 @@ import javax.swing.text.Position;
  */
 public class Searchseq extends Thread {
 
-    ImageIcon img = new ImageIcon("images/icons/orislogo.png");
+    ImageIcon img = new ImageIcon(getClass().getClassLoader().getResource("images/icons/orislogo.png"));
     final char[] sequence;
     char[] subseq;
     int tolerance;
