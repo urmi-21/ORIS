@@ -26,21 +26,19 @@ Coming Soon...
 
 ## Getting Started
 
-Download executable from: 
-
-User guide is available at: https://github.com/urmi-21/ORIS
-
 ### Prerequisites
 
 * Java Runtime Environment 8 (or higher)
 
 
-### Installing
 
-ORIS is freely available to download from . Click the download button, and then download the .zip file. Unzip the downloaded file to get a .jar file, this is the ORIS program. No further installation is required.
+### Downloading and Installing
+
+ORIS is freely available to download, as a .jar executable, from https://github.com/urmi-21/ORIS/releases. Click the download button, and then download the .jar file, this is the ORIS program. No further installation is required.
 DOUBLE CLICK on the .jar file icon to start ORIS.
 
-
+### User Guide
+User guide is available at: https://github.com/urmi-21/ORIS
 
 ## Developers
 
@@ -54,6 +52,3 @@ This project is licensed under the GNU GPL License - see the [LICENSE](LICENSE) 
 
 ## Community Guidelines
 Please report all the bugs through GitHub [here](https://github.com/urmi-21/ORIS/issues).
-
-
-
