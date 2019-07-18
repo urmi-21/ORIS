@@ -12,15 +12,16 @@ Coming Soon...
 
 ## Examples
 
-### Reading Genome Data
 
+### Reading Genome Data
+![alt text](https://github.com/urmi-21/ORIS/blob/master/figures/open.gif)
 
 
 ### Plotting GC-Skew
-
+![alt text](https://github.com/urmi-21/ORIS/blob/master/figures/GCskew.gif)
 
 ### Searching Motifs
-
+![alt text](https://github.com/urmi-21/ORIS/blob/master/figures/DnaASearch.gif)
 
 
 ## Getting Started
