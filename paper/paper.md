@@ -45,6 +45,15 @@ In addition features such as pattern matching, generating sequence logo, finding
 ORIS is a novel tool that lets the user interactively explore the whole genome sequence data using a number of computational methods and charts. ORIS is well suited for origin finding across bacteria, archaea and to some extent eukaryotes [@agarwal2017identification].
 We have described applicability of our tool, ORIS, in a case study available as a supplementary document (https://github.com/urmi-21/ORIS). The method details could also be found in the supplementary document. A user guide is available from https://github.com/urmi-21/ORIS.
 
+
+    A list of the authors of the software
+    Author affiliations
+    A summary describing the high-level functionality and purpose of the software for a diverse, non-specialist audience
+    A clear statement of need that illustrates the purpose of the software
+    Mentions (if applicable) of any ongoing research projects using the software or recent scholarly publications enabled by it
+    A list of key references including a link to the software archive
+
+
 # Acknowledgements
 US would like to thank the help and facilities provided by South Asian
 University, New Delhi and SCIS-JNU, New Delhi. AK would like to thank SCIS-JNU, New Delhi,
