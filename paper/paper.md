@@ -43,7 +43,7 @@ An effort is made to develop a software suite that does context based analysis w
 In addition features such as pattern matching, generating sequence logo, finding entropy distribution along the length of the genome, DNA bending profiles and composition statistics are also available as part of analysis. 
 
 ORIS is a novel tool that lets the user interactively explore the whole genome sequence data using a number of computational methods and charts. ORIS is well suited for origin finding across bacteria, archaea and to some extent eukaryotes [@agarwal2017identification].
-We have described applicability of our tool, ORIS, in a case study available as a supplementary document (https://github.com/urmi-21/ORIS). The method details could also be found in the supplementary document. A user guide is available from https://github.com/urmi-21/ORIS.
+We have tested and validated our tool, ORIS, by performing a case study available as a supplementary document (https://github.com/urmi-21/ORIS). The method details could also be found in the supplementary document. A user guide is available from https://github.com/urmi-21/ORIS.
 
 
     A list of the authors of the software
