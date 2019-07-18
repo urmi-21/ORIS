@@ -1,4 +1,4 @@
-
+---
 title: 'ORIS: An interactive software tool for prediction of replication origin in prokaryotic genomes'
 tags:
   - Origin of replication
@@ -25,7 +25,7 @@ affiliations:
    index: 3
 date: 18 July 2019
 bibliography: paper.bib
-
+---
 
 # Summary
 
