@@ -337,7 +337,7 @@ public class Readfile {
             if (info.length() - 1 >= 0) {
                 return info.substring(1);
             } else {
-                return "No data available";
+                return fileinfo.substring(1);
             }
         }
     }

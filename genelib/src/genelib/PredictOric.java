@@ -74,15 +74,12 @@ public class PredictOric extends Thread {
             cdslist = readglimmeroutput(fname);
         } else if (type == 1) {
             //System.err.println("Reading ptt");
-            cdslist = readptt(fname);
+            //cdslist = readptt(fname); //ptt is not used anymore
+            cdslist = readFeatureTable(fname);
         }
-//        for (int i=0;i<cdslist.length-1;i=i+2){
-//            System.out.println(cdslist[i]+"\t"+cdslist[i+1]);
-//        }
+
+        //extract intergenic regions
         intergeniclist = extractbetween(cdslist);
-//        for(int i=0;i<intergeniclist.length;i++){
-//            System.out.println(intergeniclist[i]);
-//        }
 
     }
 
@@ -483,9 +480,9 @@ public class PredictOric extends Thread {
 
         //returns 5*x min nbd
         //checks 5 min values and returns [x-5,x,x+5]
-        int x=5*dos;
-        int[] res = new int[(5 + 1 + 5)*x];
-        
+        int x = 5 * dos;
+        int[] res = new int[(5 + 1 + 5) * x];
+
         int[] indexarray = new int[data.length];
         //init index array
         for (int i = 0; i < indexarray.length; i++) {
@@ -512,23 +509,23 @@ public class PredictOric extends Thread {
         }
 
         //store first n index in res
-        int resctr=0;
+        int resctr = 0;
         for (int i = 0; i < 5; i++) {
             //System.out.println("Now x is" + indexarray[i]);
             for (int j = indexarray[i] - 5; j <= indexarray[i] + 5; j++) {
-                if(j<0){
-                    j=data.length+j;
+                if (j < 0) {
+                    j = data.length + j;
                 }
-                if(j>data.length-1){
-                    j=1;
+                if (j > data.length - 1) {
+                    j = 1;
                 }
                 res[resctr++] = j;
                 //System.out.print("\n" + res[i] + "\t");
             }
             //res[i] = indexarray[i];
         }
-        
-        int []fres= removeduplicateres(res);
+
+        int[] fres = removeduplicateres(res);
         return fres;
     }
 
@@ -648,7 +645,7 @@ public class PredictOric extends Thread {
             int cctr = 0;
             for (int i = 0; i < intergeniclist.length - 1; i = i + 2) {
 
-                // System.out.print(intergeniclist[i] + "-" + intergeniclist[i + 1] + "\n");
+                //get segments in intergenic regions
                 if (startpos <= intergeniclist[i] && intergeniclist[i] <= endpos) {
                     total++;
                 } else if (startpos <= intergeniclist[i + 1] && intergeniclist[i + 1] <= endpos) {
@@ -699,7 +696,7 @@ public class PredictOric extends Thread {
                 int len = seq_end - seq_strt + 1;
                 //System.out.print(seq_strt + "-" + seq_end+"\t");
                 tempseq = new char[len];
-           // System.out.println("Length= " + tempseq.length);
+                // System.out.println("Length= " + tempseq.length);
 
                 //extract temp seq
                 for (int j = 0; j < tempseq.length; j++) {
@@ -830,7 +827,7 @@ public class PredictOric extends Thread {
                 int len = seq_end - seq_strt + 1;
                 //System.out.print(seq_strt + "-" + seq_end+"\t");
                 tempseq = new char[len];
-           // System.out.println("Length= " + tempseq.length);
+                // System.out.println("Length= " + tempseq.length);
 
                 //extract temp seq
                 for (int j = 0; j < tempseq.length; j++) {
@@ -969,7 +966,7 @@ public class PredictOric extends Thread {
                 int len = seq_end - seq_strt + 1;
                 //System.out.print(seq_strt + "-" + seq_end+"\t");
                 tempseq = new char[len];
-           // System.out.println("Length= " + tempseq.length);
+                // System.out.println("Length= " + tempseq.length);
 
                 //extract temp seq
                 for (int j = 0; j < tempseq.length; j++) {
@@ -1115,7 +1112,7 @@ public class PredictOric extends Thread {
                 int len = seq_end - seq_strt + 1;
                 //System.out.print(seq_strt + "-" + seq_end+"\t");
                 tempseq = new char[len];
-           // System.out.println("Length= " + tempseq.length);
+                // System.out.println("Length= " + tempseq.length);
 
                 //extract temp seq
                 for (int j = 0; j < tempseq.length; j++) {
@@ -1262,7 +1259,7 @@ public class PredictOric extends Thread {
                 int len = seq_end - seq_strt + 1;
                 //System.out.print(seq_strt + "-" + seq_end+"\t");
                 tempseq = new char[len];
-           // System.out.println("Length= " + tempseq.length);
+                // System.out.println("Length= " + tempseq.length);
 
                 //extract temp seq
                 for (int j = 0; j < tempseq.length; j++) {
@@ -1381,7 +1378,7 @@ public class PredictOric extends Thread {
         String ls = System.getProperty("line.separator");
 
         try {
-            if(filepath==null||filepath.length()<1){
+            if (filepath == null || filepath.length() < 1) {
                 JOptionPane.showMessageDialog(null, "Please enter a valid file path", "File not found", JOptionPane.ERROR_MESSAGE);
                 return null;
             }
@@ -1514,6 +1511,12 @@ public class PredictOric extends Thread {
         return list;
     }
 
+    /**
+     * Read .ptt file
+     *
+     * @param filepath Filepath to .ptt file
+     * @return
+     */
     private int[] readptt(String filepath) {
         int[] list = null;
         String fileinfo = null;
@@ -1541,7 +1544,6 @@ public class PredictOric extends Thread {
                 } else if (f == 2) {
                     f = 3;
                 } else {
-                    // System.out.println("line: "+sCurrentLine);
                     numlines++;
                 }
             }
@@ -1571,6 +1573,7 @@ public class PredictOric extends Thread {
             String sCurrentLine;
             br = new BufferedReader(new FileReader(filepath));
             while ((sCurrentLine = br.readLine()) != null) {
+                //skip top lines
                 if (f == 0 || sCurrentLine.contains(">")) {
                     fileinfo = sCurrentLine;
                     f = 1;
@@ -1580,15 +1583,13 @@ public class PredictOric extends Thread {
                 } else if (f == 2) {
                     f = 3;
                 } else {
+                    //store start and end locations of a feture
                     String temp = sCurrentLine.split("\t")[0];
-                    //System.err.println(temp);
-
-                    //System.err.println(temp.split("\\.\\.")[0]);
                     list[listctr] = Integer.parseInt(temp.split("\\.\\.")[0]);
                     listctr++;
                     list[listctr] = Integer.parseInt(temp.split("\\.\\.")[1]);
                     listctr++;
-
+                    //list now contains start1,end1,s2,e2,s3,e3 etc.
                 }
 
             }
@@ -1610,20 +1611,15 @@ public class PredictOric extends Thread {
             }
         }
 
-        //System.out.println(seqstr);
         //sort list pairs
         for (int i = 0; i < list.length - 1; i = i + 2) {
-
             if (list[i] > list[i + 1]) {
                 int temp = list[i];
                 list[i] = list[i + 1];
                 list[i + 1] = temp;
             }
-
         }
-//        for(int i=0;i<list.length-1;i=i+2){
-//            System.err.println(list[i]+"\t"+list[i+1]);
-//        }
+
         //sort list in ascending
         int n = list.length;
         int k;
@@ -1640,24 +1636,152 @@ public class PredictOric extends Thread {
 
                 }
             }
-
         }
-
-//        for (int i = 0; i < list.length - 1; i = i + 2) {
-//            System.err.println(list[i] + "***\t" + list[i + 1]);
-//        }
         return list;
     }
 
+    /**
+     * Function to read feature table file and extract the genomic coordinates
+     * of the features
+     *
+     * @param filepath
+     * @return sorted genomic coordinates of the features a int array e.g.,
+     * start1,end1,s2,e2,s3,e3 etc.
+     */
+    private int[] readFeatureTable(String filepath) {
+        int[] list = null;
+        String fileinfo = null;
+        String filedata;
+        int numlines = 0;
+        int f = 0;
+        BufferedReader br = null;
+        BufferedReader cr = null;
+        /*stringBuilderdisp for storing data with new lines to display and stringBuilder
+         seq for ignoring newlines and getting only sequence chars*/
+        StringBuilder stringBuilderdisp = new StringBuilder();
+        StringBuilder stringBuilderseq = new StringBuilder();
+        String ls = System.getProperty("line.separator");
+
+        try {
+
+            String sCurrentLine;
+            br = new BufferedReader(new FileReader(filepath));
+            while ((sCurrentLine = br.readLine()) != null) {
+                if (f == 0 || sCurrentLine.contains(">")) {
+                    fileinfo = sCurrentLine;
+                    f++;
+                } else {
+                   
+                    String temp = sCurrentLine.split("\t")[0];
+                    if (temp.equals("CDS")) {
+                        numlines++;
+                    }
+                }
+            }
+
+        } catch (IOException e) {
+            JOptionPane.showMessageDialog(null, "ERROR File not found");
+            e.printStackTrace();
+            return null;
+        } finally {
+            try {
+                if (br != null) {
+                    br.close();
+                }
+            } catch (IOException ex) {
+                JOptionPane.showMessageDialog(null, "ERROR File not found");
+                //ex.printStackTrace();
+                return null;
+            }
+        }
+
+        System.out.println("Total lines=" + numlines);
+        list = new int[numlines * 2];
+        int listctr = 0;
+        f = 0;
+        //read coordinates
+        try {
+            String sCurrentLine;
+            br = new BufferedReader(new FileReader(filepath));
+            while ((sCurrentLine = br.readLine()) != null) {
+                //skip top line
+                if (f == 0 || sCurrentLine.contains(">")) {
+                    fileinfo = sCurrentLine;
+                     f++;
+                } else {
+                    //store start and end locations of a feture
+                   
+                    String temp = sCurrentLine.split("\t")[0];
+                    if (temp.equals("CDS")) {
+                        list[listctr] = Integer.parseInt(sCurrentLine.split("\t")[7]);
+                        listctr++;
+                        list[listctr] = Integer.parseInt(sCurrentLine.split("\t")[8]);
+                        listctr++;
+                    }
+                    //list now contains start1,end1,s2,e2,s3,e3 etc.
+                }
+
+            }
+
+        } catch (IOException e) {
+            JOptionPane.showMessageDialog(null, "ERROR File not found");
+            e.printStackTrace();
+            return null;
+        } finally {
+            try {
+                if (br != null) {
+                    br.close();
+                }
+            } catch (IOException ex) {
+                JOptionPane.showMessageDialog(null, "ERROR File not found");
+                //ex.printStackTrace();
+                return null;
+
+            }
+        }
+
+        //sort list pairs
+        for (int i = 0; i < list.length - 1; i = i + 2) {
+            if (list[i] > list[i + 1]) {
+                int temp = list[i];
+                list[i] = list[i + 1];
+                list[i + 1] = temp;
+            }
+        }
+
+        //sort list in ascending
+        int n = list.length;
+        int k;
+        for (int m = n; m >= 0; m = m - 2) {
+            for (int i = 0; i < n - 2; i = i + 2) {
+                k = i + 2;
+                if (list[i] > list[k]) {
+                    int tempdata = list[i];
+                    list[i] = list[k];
+                    list[k] = tempdata;
+                    int tempdata2 = list[i + 1];
+                    list[i + 1] = list[k + 1];
+                    list[k + 1] = tempdata2;
+
+                }
+            }
+        }
+        return list;
+    }
+
+    /**
+     * Get AT content
+     *
+     * @param seq DNA sequence
+     * @return
+     */
     private double returnatcontent(char[] seq) {
         double at = 0;
-
         for (int i = 0; i < seq.length; i++) {
             if (seq[i] == 'A' || seq[i] == 'T') {
                 at++;
             }
         }
-
         return (at / seq.length);
 
     }

@@ -151,7 +151,7 @@ public class Predictionform extends javax.swing.JFrame {
 
         jTextFieldthresh.setText("2");
 
-        jButtonopenptt.setText("Open .ptt file");
+        jButtonopenptt.setText("Open feature_table file");
         jButtonopenptt.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
                 jButtonopenpttActionPerformed(evt);
