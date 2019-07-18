@@ -45,7 +45,8 @@ User guide is available at: https://github.com/urmi-21/ORIS
 
 * **Urminder Singh**
 
-
+## Java dependencies
+* jmathplot
 
 ## License
 
