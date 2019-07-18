@@ -1,5 +1,4 @@
-# ORIS
-ORIS: An interactive software tool for prediction of replication origin in prokaryotic genomes
+# ORIS: An interactive software tool for prediction of replication origin in prokaryotic genomes
 
 ![alt text](https://github.com/urmi-21/ORIS/blob/master/figures/oldoris.png)
 
