@@ -41,9 +41,12 @@ DOUBLE CLICK on the .jar file icon to start ORIS.
 ### User Guide
 User guide is available at: https://github.com/urmi-21/ORIS
 
+### Method Details and Case Study
+A document describing ORIS' methods along with a case study is available here: https://github.com/urmi-21/ORIS/blob/master/ORIS_SI.pdf
+
 ## Developers
 
-* **Urminder Singh**
+**Urminder Singh**
 
 ## Java dependencies
 * jmathplot
