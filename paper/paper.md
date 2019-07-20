@@ -10,18 +10,18 @@ authors:
    affiliation: 1
  - name: Kushal Shah
    affiliation: 2
-- name: Suman Dhar
+ - name: Suman Dhar
    affiliation: 3
-- name: Vinod Kumar Singh
+ - name: Vinod Kumar Singh
    affiliation: 1
-- name: Annangarachari Krishnamachari
+ - name: Annangarachari Krishnamachari
    affiliation: 1
 affiliations:
  - name: School of Computational and Integrative Sciences, Jawaharlal Nehru University, New Delhi, India
    index: 1
  - name: Department of Electrical Engineering and Bharti School of Telecommunication Technology and Management, IIT Delhi, India
    index: 2
-- name: Special centre for Molecular Medicine, Jawaharlal Nehru University, New Delhi, India
+ - name: Special centre for Molecular Medicine, Jawaharlal Nehru University, New Delhi, India
    index: 3
 date: 18 July 2019
 bibliography: paper.bib
