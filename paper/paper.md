@@ -45,8 +45,10 @@ In addition, features such as pattern matching, generating sequence logo, findin
 
 ORIS is a novel tool that lets the user interactively explore the whole genome sequence data using a number of computational methods and charts. ORIS is well suited for origin finding across bacteria, archaea and to some extent eukaryotes. ORIS was used for hypothesizing putative origin of replication sites in *Plasmodium falciparum*, which were later experimentally verified [@agarwal2017identification].
 
+
 We have tested and validated our tool, ORIS, by performing a case study, available as a supplementary document (https://github.com/urmi-21/ORIS). The method details are also included in the supplementary document. A user guide is available from https://github.com/urmi-21/ORIS.
 
+ORIS is developed particularly for biologists and researchers who are working in the area of DNA replication. ORIS allows users with little or no programming background to interactively explore whole genome sequences and identify the putative origin of replication sites in the genome of interest. All the computational methods implemented in ORIS are accessible through a simple and intuitive GUI. We hope this will help biologists comprehensively analyze their DNA sequences.
 
 # Acknowledgements
 US would like to thank the help and facilities provided by South Asian
