@@ -35,7 +35,7 @@ Coming Soon...
 
 ### Downloading and Installing
 
-ORIS is freely available to download, as a .jar executable, from https://github.com/urmi-21/ORIS/releases. Click the download button, and then download the .jar file, this is the ORIS program. No further installation is required.
+ORIS is freely available to download, as a .jar executable, from https://github.com/urmi-21/ORIS/releases. Download [ORISv1.0.zip] (https://github.com/urmi-21/ORIS/releases), and unzip the contents. In the unzipped folder find the ORISv1.0.jar file, this is the ORIS program. No further installation is required.
 DOUBLE CLICK on the .jar file icon to start ORIS.
 
 ### User Guide
