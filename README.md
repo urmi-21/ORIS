@@ -57,4 +57,4 @@ A document describing ORIS' methods along with a case study is available here: h
 This project is licensed under the GNU GPL License - see the [LICENSE](LICENSE) file for details
 
 ## Community Guidelines
-Please report all the bugs through GitHub [here](https://github.com/urmi-21/ORIS/issues).
+Please report all the bugs through GitHub [here](https://github.com/urmi-21/ORIS/issues). Please see [CONTRIBUTING](https://github.com/urmi-21/ORIS/blob/master/CONTRIBUTING.md) for guidelines on how to contribute to this project.
