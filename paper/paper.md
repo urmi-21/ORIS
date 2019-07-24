@@ -9,6 +9,7 @@ authors:
    orcid: 0000-0003-3703-0820
    affiliation: 1
  - name: Kushal Shah
+   orcid: 0000-0003-3398-8425
    affiliation: 2
  - name: Suman Dhar
    affiliation: 3
