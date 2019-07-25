@@ -11,7 +11,8 @@ Here, information is provided for contributers who would like to contribute to O
 jmathplot (https://github.com/yannrichet/jmathplot)
 
 ## Cloning ORIS
-Use the command 
+To download the code please clone ORIS using the command:
+
 ```
 git clone https://github.com/urmi-21/ORIS.git
 ```
