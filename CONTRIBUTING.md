@@ -5,6 +5,11 @@ Before contributing to this project please discuss the suggested changes via iss
 
 
 # Getting Started
+Here, information is provided for contributers who would like to contribute to ORIS.
+
 ## Dependencies
-jmathplot
+jmathplot (https://github.com/yannrichet/jmathplot)
+
+## Cloning ORIS
+Use the command git clone https://github.com/urmi-21/ORIS.git
 
