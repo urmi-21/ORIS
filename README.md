@@ -40,7 +40,7 @@ ORIS is freely available to download from https://github.com/urmi-21/ORIS/releas
 DOUBLE CLICK on the .jar file icon to start ORIS.
 
 ### User Guide
-User guide describing the functionality is available at: https://github.com/urmi-21/ORIS
+User guide describing the functionality is available at: https://github.com/urmi-21/ORIS/blob/master/OrisGuide.pdf
 
 ### Methods and Case Study
 A document describing ORIS' methods along with a case study is available here: https://github.com/urmi-21/ORIS/blob/master/ORIS_SI.pdf
