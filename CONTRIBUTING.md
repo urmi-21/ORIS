@@ -24,3 +24,6 @@ _bioapp_ contains classes for the GUI components of ORIS. _genelib_ contains the
 ## Building
 After opening _bioapp_ and _genelib_ projects first build the _genelib_ project. Then to build the _bioapp_ project, add _genelib.jar_ as a dependency. _jmathplot.jar_ is required for both projects.
 
+## Running
+The main class is present in the _bioapp_ project. Run the _bioapp_ project to start ORIS.
+
