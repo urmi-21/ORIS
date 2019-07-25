@@ -27,6 +27,9 @@ User guide describing the functionality is available at: https://github.com/urmi
 ### Methods and Case Study
 A document describing ORIS' methods along with a case study is available here: https://github.com/urmi-21/ORIS/blob/master/ORIS_SI.pdf
 
+### Testing ORIS
+Please see https://github.com/urmi-21/ORIS/tree/master/test
+
 ## Citation
 Coming Soon...
 
