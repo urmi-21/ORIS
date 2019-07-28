@@ -30,6 +30,9 @@ A document describing ORIS' methods along with a case study is available here: h
 ### Testing ORIS
 Please see https://github.com/urmi-21/ORIS/tree/master/test
 
+### Building
+For building instructions please see https://github.com/urmi-21/ORIS/blob/master/CONTRIBUTING.md
+
 ## Citation
 Coming Soon...
 
