@@ -3,7 +3,7 @@
  * and open the template in the editor.
  */
 
-/*
+ /*
  * Form2.java
  *
  * Created on Mar 24, 2013, 11:55:01 PM
@@ -49,13 +49,12 @@ import javax.swing.text.*;
 
 /**
  *
- * @author urmi
- * This is the main display form for ORIS.
+ * @author urmi This is the main display form for ORIS.
  */
 public class Form2 extends javax.swing.JFrame {
 
-   public ImageIcon img = new ImageIcon(ImageIO.read(getClass().getResourceAsStream("/images/icons/orislogo.png")));
-   
+    public ImageIcon img = new ImageIcon(ImageIO.read(getClass().getResourceAsStream("/images/icons/orislogo.png")));
+
     int filereadflag;
     SimpleAttributeSet set;
     String filedata;
@@ -65,7 +64,7 @@ public class Form2 extends javax.swing.JFrame {
     static public char PRIORITY;
     static public String DEFAULT_OPEN_DIR;
     static public String DEFAULT_SAVE_DIR;
-    
+
     /*public BufferedImage getImageStream(String path){
         try {
             return ImageIO.read(getClass().getResourceAsStream(path));
@@ -79,7 +78,6 @@ public class Form2 extends javax.swing.JFrame {
         return getClass().getClassLoader().getResource(path);
        
     }*/
-
     /**
      * Creates new form Form2
      */
@@ -226,7 +224,7 @@ public class Form2 extends javax.swing.JFrame {
         jToolBar1.setFloatable(false);
         //jButtonopen.setIcon(new ImageIcon("images/icons/folder.png", "open"));
         jButtonopen.setIcon(new ImageIcon(getClass().getClassLoader().getResource("images/icons/folder.png"), "open"));
-                
+
         jButtondownload.setIcon(new ImageIcon(getClass().getClassLoader().getResource("images/icons/download.png"), "download"));
         jButtondownload.setIcon(new ImageIcon(getClass().getClassLoader().getResource("images/icons/download.png"), "download"));
         jButtonfind.setIcon(new ImageIcon(getClass().getClassLoader().getResource("images/icons/search.png"), "search"));
@@ -344,6 +342,7 @@ public class Form2 extends javax.swing.JFrame {
         jMenuItemsettings = new javax.swing.JMenuItem();
         jMenuItemabout = new javax.swing.JMenuItem();
         jMenuItemguide = new javax.swing.JMenuItem();
+        jMenuItem2 = new javax.swing.JMenuItem();
         jMenuItemjmath = new javax.swing.JMenuItem();
 
         jMenuItem1.setText("jMenuItem1");
@@ -921,6 +920,14 @@ public class Form2 extends javax.swing.JFrame {
         });
         jMenu2.add(jMenuItemguide);
 
+        jMenuItem2.setText("GitHub");
+        jMenuItem2.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                jMenuItem2ActionPerformed(evt);
+            }
+        });
+        jMenu2.add(jMenuItem2);
+
         jMenuItemjmath.setText("Jmathplot");
         jMenuItemjmath.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
@@ -1208,18 +1215,16 @@ public class Form2 extends javax.swing.JFrame {
                     offset = pos[i] / 70;
                     // System.out.printf("offset=%d\n", offset);
                     try {
-                        
-                        String thisOS= System.getProperty("os.name");
-                        if(thisOS.contains("Windows")){
+
+                        String thisOS = System.getProperty("os.name");
+                        if (thisOS.contains("Windows")) {
                             //for windows
-                         h.addHighlight((pos[i] - 1) + (offset * 2), ((pos[i] - 1) + searchlen + (offset * 2)), DefaultHighlighter.DefaultPainter);
-                        }else{
-                           //for linux
+                            h.addHighlight((pos[i] - 1) + (offset * 2), ((pos[i] - 1) + searchlen + (offset * 2)), DefaultHighlighter.DefaultPainter);
+                        } else {
+                            //for linux
                             h.addHighlight((pos[i] - 1) + (offset), ((pos[i] - 1) + searchlen + (offset)), DefaultHighlighter.DefaultPainter);
                         }
-                        
 
-                        
                     } catch (BadLocationException ex) {
                         Logger.getLogger(Form2.class.getName()).log(Level.SEVERE, null, ex);
                     }
@@ -1257,11 +1262,11 @@ public class Form2 extends javax.swing.JFrame {
             File chosenFile = chooser.getSelectedFile();
             try {
                 jTextFieldopened.setText(chosenFile.getCanonicalPath());
-                filedata=null;
+                filedata = null;
             } catch (IOException ex) {
                 Logger.getLogger(Form2.class.getName()).log(Level.SEVERE, null, ex);
             }
-            
+
             //clear all fields for new file read
             jTextFieldrotation.setText("0000000");
             jTextAreagseq.setText(null);
@@ -1274,15 +1279,15 @@ public class Form2 extends javax.swing.JFrame {
             jTextFieldpercentC.setText(null);
             jTextFieldpercentT.setText(null);
             jTextAreagseq.setText(null);
-            
+
             Readfile ob = new Readfile();
             filedata = ob.newread(jTextFieldopened.getText());
             //if file read failed     
-            if(filedata==null){
+            if (filedata == null) {
                 JOptionPane.showMessageDialog(null, "File reading failed", "Error", JOptionPane.ERROR_MESSAGE);
                 //clear opened file field
                 jTextFieldopened.setText(null);
-                filereadflag=0;
+                filereadflag = 0;
                 return;
             }
 
@@ -1783,6 +1788,16 @@ public class Form2 extends javax.swing.JFrame {
         }
     }//GEN-LAST:event_jMenuItematentropyActionPerformed
 
+    private void jMenuItem2ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jMenuItem2ActionPerformed
+        // TODO add your handling code here:
+         try {
+            URL githuburl = new URL("https://github.com/urmi-21/ORIS");
+            Desktop.getDesktop().browse(githuburl.toURI());
+        } catch (Exception e) {
+            e.printStackTrace();
+        }
+    }//GEN-LAST:event_jMenuItem2ActionPerformed
+
 //function to get path of ORIS
     public static String getjarPath() throws UnsupportedEncodingException {
         URL url = Form2.class.getProtectionDomain().getCodeSource().getLocation();
@@ -1861,6 +1876,7 @@ public class Form2 extends javax.swing.JFrame {
     private javax.swing.JMenu jMenu9;
     private javax.swing.JMenuBar jMenuBar1;
     private javax.swing.JMenuItem jMenuItem1;
+    private javax.swing.JMenuItem jMenuItem2;
     private javax.swing.JMenuItem jMenuItemCat;
     private javax.swing.JMenuItem jMenuItemCgc;
     private javax.swing.JMenuItem jMenuItemCmk;
