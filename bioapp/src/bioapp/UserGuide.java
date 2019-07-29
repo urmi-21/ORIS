@@ -219,7 +219,7 @@ public class UserGuide extends javax.swing.JFrame {
 
     private void jLabelwtmatrixMouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_jLabelwtmatrixMouseClicked
         // TODO add your handling code here:
-        jTextAreahelp.setText("Users can read a non-gaped seq-alignment file to create a weight matrix or can create a weight matrix \non their own.\nThen one can enter a Sequence in which search is performed and results are stored in a .txt file \nspecified by the user.\nTo perform weight matrix search:\n1. Click Search\n2. Choose Weight-Matrix search\n3. Read non-gaped alignment file or create a weight matrix\n4. Enter a Sequence to perform search and select a threshold value to indicate significant matches.");
+        jTextAreahelp.setText("Users can read a non-gapped seq-alignment file to create a weight matrix or can create a weight matrix \non their own.\nThen one can enter a Sequence in which search is performed and results are stored in a .txt file \nspecified by the user.\nTo perform weight matrix search:\n1. Click Search\n2. Choose Weight-Matrix search\n3. Read non-gapped alignment file or create a weight matrix\n4. Enter a Sequence to perform search and select a threshold value to indicate significant matches.");
     }//GEN-LAST:event_jLabelwtmatrixMouseClicked
 
     private void jLabelextractseqMouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_jLabelextractseqMouseClicked
