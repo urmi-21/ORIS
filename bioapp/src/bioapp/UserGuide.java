@@ -8,11 +8,12 @@ import javax.swing.ImageIcon;
 
 /**
  *
- * @author jnu
- * This class is an inbuilt user guide
+ * @author jnu This class is an inbuilt user guide
  */
 public class UserGuide extends javax.swing.JFrame {
-ImageIcon img = new ImageIcon(getClass().getClassLoader().getResource("images/icons/orislogo.png"));
+
+    ImageIcon img = new ImageIcon(getClass().getClassLoader().getResource("images/icons/orislogo.png"));
+
     /**
      * Creates new form UserGuide
      */
@@ -23,7 +24,7 @@ ImageIcon img = new ImageIcon(getClass().getClassLoader().getResource("images/ic
         this.setIconImage(img.getImage());
         this.setDefaultCloseOperation(DISPOSE_ON_CLOSE);
         this.setResizable(false);
-        
+
     }
 
     /**
@@ -203,7 +204,7 @@ ImageIcon img = new ImageIcon(getClass().getClassLoader().getResource("images/ic
 
     private void jLabelskewMouseEntered(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_jLabelskewMouseEntered
         // TODO add your handling code here:
-        
+
     }//GEN-LAST:event_jLabelskewMouseEntered
 
     private void jLabelcorrMouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_jLabelcorrMouseClicked
@@ -213,54 +214,58 @@ ImageIcon img = new ImageIcon(getClass().getClassLoader().getResource("images/ic
 
     private void jLabelsearchMouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_jLabelsearchMouseClicked
         // TODO add your handling code here:
-        jTextAreahelp.setText("Pattern search is helpful for finding motifs or regions of intereset in a given sequence.\nTo find a pattern, after reading file:\n1. Click pattern search\n2. Choose a type of search\n3. Choose appropriate parameters for search.\n\n\n Parameters for pattern search:\na. Reverse Complement: Check this option to also search the reverse complement sequnce.\nb. Sequence logo: Check this option to generate a sequence logo based on search results.\nc. Search Statics: Check this option if you want to view graphically, where the matches have been \nfound in the sequnce.\nd. Save results: Check this option to save search results into a .txt file\ne. Tolerance: select a tolerance value. This will allow mismatches, e.g. search with tolerance \nvalue=1 will allow 1 mismatch.");
+        jTextAreahelp.setText("Pattern search is helpful for finding motifs or regions of intereset in a given sequence.\nTo find a pattern, after reading file:\n1. Click pattern search\n2. Choose a type of search\n3. Choose appropriate parameters for search.\n\n\n Parameters for pattern search:\na. Reverse Complement: Check this option to also search the reverse complement sequence.\nb. Sequence logo: Check this option to generate a sequence logo based on search results.\nc. Search Statics: Check this option if you want to view graphically, where the matches have been \nfound in the sequence.\nd. Save results: Check this option to save search results into a .txt file\ne. Tolerance: select a tolerance value. This will allow mismatches, e.g. search with tolerance \nvalue=1 will allow 1 mismatch.");
     }//GEN-LAST:event_jLabelsearchMouseClicked
 
     private void jLabelwtmatrixMouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_jLabelwtmatrixMouseClicked
         // TODO add your handling code here:
-         jTextAreahelp.setText("Users can read a non-gaped seq-alignment file to create a weight matrix or can create a weight matrix \non their own.\nThen one can enter a Sequnce in which search is performed and results are stored in a .txt file \nspecified by the user.\nTo perform weight matrix search:\n1. Click Search\n2. Choose Weight-Matrix search\n3. Read non-gaped alignment file or create a weight matrix\n4. Enter a Sequnce to perform search and select a threshold value to indicate significant matches.");
+        jTextAreahelp.setText("Users can read a non-gaped seq-alignment file to create a weight matrix or can create a weight matrix \non their own.\nThen one can enter a Sequence in which search is performed and results are stored in a .txt file \nspecified by the user.\nTo perform weight matrix search:\n1. Click Search\n2. Choose Weight-Matrix search\n3. Read non-gaped alignment file or create a weight matrix\n4. Enter a Sequence to perform search and select a threshold value to indicate significant matches.");
     }//GEN-LAST:event_jLabelwtmatrixMouseClicked
 
     private void jLabelextractseqMouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_jLabelextractseqMouseClicked
         // TODO add your handling code here:
-         jTextAreahelp.setText("Extract Sequnce simply extracts sequence from one given start position till an end position and saves \nit in a .txt file.\nTo Extract Sequence, after reading file:\n1. Click Search\n2. Choose Extract Sequence\n3. Input start and ending positions (positions starting from 1).");
+        jTextAreahelp.setText("Extract Sequence simply extracts sequence from one given start position till an end position and saves \nit in a .txt file.\nTo Extract Sequence, after reading file:\n1. Click Search\n2. Choose Extract Sequence\n3. Input start and ending positions (positions starting from 1).");
     }//GEN-LAST:event_jLabelextractseqMouseClicked
 
     private void jLabelbendingMouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_jLabelbendingMouseClicked
         // TODO add your handling code here:
-         jTextAreahelp.setText("Bending analysis is for analysing bending propensity of trimers in regions of interest like oriC.\nTo compute Bending Analysis, after reading file:\n1. Click DNA analysis\n2. Choose DNA bending analysis\n3. Choose appropriate region of interest by giving position in the sequence.");
+        jTextAreahelp.setText("Bending analysis is for analyzing bending propensity of trimers in regions of interest like oriC.\nTo compute Bending Analysis, after reading file:\n1. Click DNA analysis\n2. Choose DNA bending analysis\n3. Choose appropriate region of interest by giving position in the sequence.");
     }//GEN-LAST:event_jLabelbendingMouseClicked
 
     private void jLabelentropyMouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_jLabelentropyMouseClicked
         // TODO add your handling code here:
-         jTextAreahelp.setText("Entropy is used to find the information content of the sequnce. Oris includes Shannons, Renyi \nand Binary entropy methods.\nTo compute entropy, after reading file:\n1. Click Information\n2. Choose appropriate entropy method");
+        jTextAreahelp.setText("Entropy is used to find the information content of the sequence. Oris includes Shannons, Renyi \nand Binary entropy methods.\nTo compute entropy, after reading file:\n1. Click Information\n2. Choose appropriate entropy method");
     }//GEN-LAST:event_jLabelentropyMouseClicked
 
     private void jLabelcompositionMouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_jLabelcompositionMouseClicked
         // TODO add your handling code here:
-         jTextAreahelp.setText("Viewing sequence Composition helpful for basic knowledge about the read sequence.\nTo compute Composition, after reading file:\n1. Click Composition\n2. Choose appropriate nucleotide to view its composition variation in sequence");
+        jTextAreahelp.setText("Viewing sequence Composition helpful for basic knowledge about the read sequence.\nTo compute Composition, after reading file:\n1. Click Composition\n2. Choose appropriate nucleotide to view its composition variation in sequence");
     }//GEN-LAST:event_jLabelcompositionMouseClicked
 
     private void jLabelsettingsMouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_jLabelsettingsMouseClicked
         // TODO add your handling code here:
-         jTextAreahelp.setText("User can modify some settings of ORIS according his/her requirments.\n Settings menu include:\n1. Default Window size: It is the default window size used in windowing analysis system.\n2. Default Increament size: It is the default increment size used in windowing analysis system.");
-         jTextAreahelp.append("\n3. Default Save Directory: It is the default directory in which ORIS will save result files");
-         jTextAreahelp.append("\n4. Default Open Directory: It is the default directory from which ORIS will open sequence files");
-         jTextAreahelp.append("\n5. Priority: It is ORIS running priority. L is Low, M is Medium, H is High. The Higher the priority more cpu \ncores ORIS will utilize.");
-         jTextAreahelp.append("\n\n\t****All these Settings are saved in ORIS directory in a file, \"settings.cfg\"****");
-         jTextAreahelp.append("\n\n\t****If \"settings.cfg\" is deleted ORIS creates a new copy of it.****");
+
+        jTextAreahelp.setText("User can modify some settings of ORIS according his/her requirements.\n Settings menu include:\n1. Default Window size: It is the default window size used in windowing analysis system.\n2. Default Increment size: It is the default increment size used in windowing analysis system.");
+        jTextAreahelp.append("\n3. Default Save Directory: It is the default directory in which ORIS will save result files");
+        jTextAreahelp.append("\n4. Default Open Directory: It is the default directory from which ORIS will open sequence files");
+        jTextAreahelp.append("\n5. Priority: It is ORIS running priority. L is Low, M is Medium, H is High. The Higher the priority more CPU \ncores ORIS will utilize.");
+        jTextAreahelp.append("\n\n\t****All these Settings are saved in ORIS directory in a file, \"settings.cfg\"****");
+        jTextAreahelp.append("\n\n\t****If \"settings.cfg\" is deleted ORIS creates a new copy of it.****");
+
     }//GEN-LAST:event_jLabelsettingsMouseClicked
 
     private void jLabel1MouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_jLabel1MouseClicked
         // TODO add your handling code here:
-        jTextAreahelp.setText("Most methods in ORIS use a sliding window method to compute results. \nTo do this a window of some size is chosen and an increment is defined. Then computations are \ndone on the sequence under the window. The window is then slid with an increment value and \nprocedure is repeated.\n\nSliding window is used as sequnces are very large and doing computation on whole sequence will be \nvery slow" );
+        jTextAreahelp.setText("Most methods in ORIS use a sliding window method to compute results. \nTo do this a window of some size is chosen and an increment is defined. Then computations are \ndone on the sequence under the window. The window is then slid with an increment value and \nprocedure is repeated.\n\nSliding window is used as sequences are very large and doing computation on whole sequence will be \nvery slow");
     }//GEN-LAST:event_jLabel1MouseClicked
 
     private void jLabel4MouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_jLabel4MouseClicked
         // TODO add your handling code here:
-        jTextAreahelp.setText("                                                           ORIS (ver 1.0) USER GUIDE\n" +
-"\n" +
-"Click On topics on left to get related help.");
+        // TODO add your handling code here:
+        jTextAreahelp.setText("                                                           ORIS (ver 1.0) USER GUIDE\n"
+                + "\n"
+                + "Click On topics on left to get related help.");
+
     }//GEN-LAST:event_jLabel4MouseClicked
 
     /**
