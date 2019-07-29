@@ -11,7 +11,9 @@ import javax.swing.JOptionPane;
 //import sun.org.mozilla.javascript.internal.ScriptRuntime;
 
 /**
- *Class to read input genome file in fasta format and compute sequence statistics
+ * Class to read input genome file in fasta format and compute sequence
+ * statistics
+ *
  * @author urmi
  */
 public class Readfile {
@@ -20,11 +22,12 @@ public class Readfile {
     String fileinfo = null;
     String filedata;
     int numlines;
-    
+
     /**
      * function to read a new file
+     *
      * @param filepath absolute path of the fasta file
-     * @return 
+     * @return
      */
     public String newread(String filepath) {
 
@@ -44,6 +47,14 @@ public class Readfile {
             br = new BufferedReader(new FileReader(filepath));
 
             while ((sCurrentLine = br.readLine()) != null) {
+
+                //check multi fasta file
+                if (f == 1 && sCurrentLine.contains(">")) {
+                    JOptionPane.showMessageDialog(null, "Multiple fasta headers detected in file. Please use a single-sequence fasta file", "Error", JOptionPane.ERROR_MESSAGE);
+                    return null;
+                }
+
+                //use contains instead of startswith if there aren't newlines
                 if (f == 0 && sCurrentLine.contains(">")) {
                     fileinfo = sCurrentLine;
                     f = 1;
@@ -86,7 +97,7 @@ public class Readfile {
 
         for (int i = 0; i < sequence.length; i++) {
             sequence[i] = seqstr.charAt(i);
-            sequence[i]=Character.toUpperCase(sequence[i]);
+            sequence[i] = Character.toUpperCase(sequence[i]);
             if (extracharflag == false) {
                 if ((sequence[i] != 'A') && (sequence[i] != 'T') && (sequence[i] != 'G') && (sequence[i] != 'C')) {//||sequence[i]!='C'||sequence[i]!='G'||sequence[i]!='T'){
                     extracharflag = true;
@@ -110,6 +121,7 @@ public class Readfile {
 
     /**
      * return the DNA sequence data as char array
+     *
      * @return DNA sequence
      */
     public char[] returnseq() {
@@ -117,7 +129,8 @@ public class Readfile {
     }
 
     /**
-     * rotate the circular genomic DNA by given nucleotides. 
+     * rotate the circular genomic DNA by given nucleotides.
+     *
      * @param index number of nucleotides to rotate
      * @param direction clockwise ot anti-clockwise
      */
@@ -129,7 +142,6 @@ public class Readfile {
             System.arraycopy(sequence, index, result, 0, sequence.length - index);
             System.arraycopy(sequence, 0, result, sequence.length - index, index);
             System.arraycopy(result, 0, sequence, 0, sequence.length);
-            
 
         } //Fwd or clockwise rotation
         else {
@@ -145,18 +157,24 @@ public class Readfile {
 
     /**
      * returns the length of genome
-     * @return 
+     *
+     * @return
      */
     public String returnglength() {
         //System.out.println("length=" + sequence.length);
+        if(sequence==null){
+            return "0";
+        }
         return String.valueOf(sequence.length);
     }
 
     /**
      * return percent of A nucleotides
-     * @return 
+     *
+     * @return
      */
     public String returnpercentA() {
+        
         float ctrA = 0;
         for (int i = 0; i < sequence.length; i++) {
             if (sequence[i] == 'A') {
@@ -169,7 +187,8 @@ public class Readfile {
 
     /**
      * return percent of G nucleotides
-     * @return 
+     *
+     * @return
      */
     public String returnpercentG() {
         float ctrG = 0;
@@ -184,7 +203,8 @@ public class Readfile {
 
     /**
      * return percent of C nucleotides
-     * @return 
+     *
+     * @return
      */
     public String returnpercentC() {
         float ctrC = 0;
@@ -199,7 +219,8 @@ public class Readfile {
 
     /**
      * return percent of T nucleotides
-     * @return 
+     *
+     * @return
      */
     public String returnpercentT() {
         float ctrT = 0;
@@ -214,7 +235,8 @@ public class Readfile {
 
     /**
      * return genome GI from fasta header
-     * @return 
+     *
+     * @return
      */
     public String returngi() {
 
@@ -257,7 +279,8 @@ public class Readfile {
 
     /**
      * return genome accession from fasta header
-     * @return 
+     *
+     * @return
      */
     public String returnaccession() {
 
@@ -310,7 +333,8 @@ public class Readfile {
 
     /**
      * return genome info from fasta header
-     * @return 
+     *
+     * @return
      */
     public String returninfo() {
 

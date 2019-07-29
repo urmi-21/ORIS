@@ -1257,11 +1257,11 @@ public class Form2 extends javax.swing.JFrame {
             File chosenFile = chooser.getSelectedFile();
             try {
                 jTextFieldopened.setText(chosenFile.getCanonicalPath());
+                filedata=null;
             } catch (IOException ex) {
                 Logger.getLogger(Form2.class.getName()).log(Level.SEVERE, null, ex);
             }
-            Readfile ob = new Readfile();
-            filedata = ob.newread(jTextFieldopened.getText());
+            
             //clear all fields for new file read
             jTextFieldrotation.setText("0000000");
             jTextAreagseq.setText(null);
@@ -1273,9 +1273,21 @@ public class Form2 extends javax.swing.JFrame {
             jTextFieldpercentG.setText(null);
             jTextFieldpercentC.setText(null);
             jTextFieldpercentT.setText(null);
-            jTextAreagseq.setText(filedata);
+            jTextAreagseq.setText(null);
+            
+            Readfile ob = new Readfile();
+            filedata = ob.newread(jTextFieldopened.getText());
+            //if file read failed     
+            if(filedata==null){
+                JOptionPane.showMessageDialog(null, "File reading failed", "Error", JOptionPane.ERROR_MESSAGE);
+                //clear opened file field
+                jTextFieldopened.setText(null);
+                filereadflag=0;
+                return;
+            }
 
             //set new data
+            jTextAreagseq.setText(filedata);
             jTextFieldgi.setText(ob.returngi());
             jTextFieldaccession.setText(ob.returnaccession());
             jTextFieldinfo.setText(ob.returninfo());
