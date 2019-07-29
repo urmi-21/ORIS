@@ -8,6 +8,31 @@ ORIS is a novel tool, written in JAVA, that lets the user interactively explore 
 ORIS is developed particularly for biologists and researchers who are working in the area of DNA replication. ORIS allows users with little or no programming background to interactively explore whole genome sequences and identify the putative origin of replication sites in the genome of interest. All the computational methods implemented in ORIS are accessible through a simple and intuitive GUI. We hope this will help biologists comprehensively analyze their DNA sequences.
 We have described applicability of our tool, ORIS, in a case study available as a supplementary document (https://github.com/urmi-21/ORIS). The method details could also be found in the supplementary document. A user guide is available from https://github.com/urmi-21/ORIS.
 
+## Getting Started
+
+### Prerequisites
+
+* Java Runtime Environment 8 (or higher)
+
+
+
+### Downloading and Installing
+
+ORIS is freely available to download from https://github.com/urmi-21/ORIS/releases. Download [ORISv1.0.zip](https://github.com/urmi-21/ORIS/releases), and unzip the contents. In the unzipped folder find the ORISv1.0.jar file, this is the ORIS program. No further installation is required.
+DOUBLE CLICK on the .jar file icon to start ORIS.
+
+### User Guide
+User guide describing the functionality is available at: https://github.com/urmi-21/ORIS/blob/master/OrisGuide.pdf
+
+### Methods and Case Study
+A document describing ORIS' methods along with a case study is available here: https://github.com/urmi-21/ORIS/blob/master/ORIS_SI.pdf
+
+### Testing ORIS
+Please see https://github.com/urmi-21/ORIS/tree/master/test
+
+### Building
+For building instructions please see https://github.com/urmi-21/ORIS/blob/master/CONTRIBUTING.md
+
 ## Citation
 Coming Soon...
 
@@ -26,24 +51,7 @@ Coming Soon...
 ![alt text](https://github.com/urmi-21/ORIS/blob/master/figures/DnaASearch.gif)
 
 
-## Getting Started
 
-### Prerequisites
-
-* Java Runtime Environment 8 (or higher)
-
-
-
-### Downloading and Installing
-
-ORIS is freely available to download from https://github.com/urmi-21/ORIS/releases. Download [ORISv1.0.zip](https://github.com/urmi-21/ORIS/releases), and unzip the contents. In the unzipped folder find the ORISv1.0.jar file, this is the ORIS program. No further installation is required.
-DOUBLE CLICK on the .jar file icon to start ORIS.
-
-### User Guide
-User guide is available at: https://github.com/urmi-21/ORIS
-
-### Methods and Case Study
-A document describing ORIS' methods along with a case study is available here: https://github.com/urmi-21/ORIS/blob/master/ORIS_SI.pdf
 
 ## Developers
 
