@@ -1,6 +1,7 @@
 ![alt text](https://github.com/urmi-21/ORIS/blob/master/figures/oldoris.png)
 # ORIS: An interactive software tool for prediction of replication origin in prokaryotic genomes
 
+[![DOI](https://joss.theoj.org/papers/10.21105/joss.01589/status.svg)](https://doi.org/10.21105/joss.01589)
 
 ## Introduction
 ORIS is a novel tool, written in JAVA, that lets the user interactively explore the whole genome sequence data using a number of computational methods and charts. ORIS is well suited for finding the origin of replication sites across bacteria, archaea and to some extent eukaryotes. ORIS successfully predicted the origin of replication sites in the genome of *Plasmodium falciparum* (Agarwal, M., Bhowmick, K., Shah, K., Krishnamachari, A., & Dhar, S. K. (2017). Identification and characterization of ARS‐like sequences as putative origin (s) of replication in human malaria parasite Plasmodium falciparum. The FEBS journal, 284(16), 2674-2695.).
