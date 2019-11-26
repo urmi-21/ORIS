@@ -37,7 +37,10 @@ Please see https://github.com/urmi-21/ORIS/tree/master/test
 For building instructions please see https://github.com/urmi-21/ORIS/blob/master/CONTRIBUTING.md
 
 ## Citation
-Coming Soon...
+Please cite as:
+Singh et al., (2019). ORIS: An interactive software tool for prediction of replication origin in prokaryotic genomes. Journal of Open Source Software, 4(40), 1589, https://doi.org/10.21105/joss.01589
+
+
 
 
 ## Examples
